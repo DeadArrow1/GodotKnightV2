@@ -161,6 +161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85039d96f791c6e45a5878409bc1c281, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingHealth: 3
+  XPYield: 20
+  gameData: {fileID: 11400000, guid: 1cdac895c257feb49afee79104bad52d, type: 2}
 --- !u!1 &1908955159031468168
 GameObject:
   m_ObjectHideFlags: 0

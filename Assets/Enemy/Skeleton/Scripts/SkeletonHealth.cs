@@ -4,7 +4,9 @@ public class SkeletonHealth : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [SerializeField] private int startingHealth = 3;
+    [SerializeField] private int XPYield = 20;
 
+    [SerializeField] private GameData gameData;
     private int currentHealth;
 
     private void Start()
@@ -22,6 +24,7 @@ public class SkeletonHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            gameData.CurrentXP += XPYield;
             Destroy(gameObject);
         }
     }

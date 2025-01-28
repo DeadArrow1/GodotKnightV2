@@ -24,4 +24,23 @@ public class GameData : ScriptableObject
     }
 
 
+    [SerializeField]
+    private int _neededXP;
+
+    public int NeededXP
+    {
+        get { return _neededXP; }
+        set { _neededXP = value; }
+    }
+
+
+    [SerializeField]
+    private int _currentXP;
+
+    public int CurrentXP
+    {
+        get { return _currentXP; }
+        set { _currentXP = value; }
+    }
+
 }
