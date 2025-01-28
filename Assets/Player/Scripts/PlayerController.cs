@@ -2,12 +2,12 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {
     public bool FacingLeft { get { return facingLeft; } set { facingLeft = value; } }
     [SerializeField] private float moveSpeed = 1f;
     [SerializeField] private Transform weaponCollider;
-
+    [SerializeField] private GameData gameData;
 
     private PlayerControls playerControls;
     private Vector2 movement;
@@ -18,14 +18,20 @@ public class PlayerController : MonoBehaviour
     
     private bool facingLeft = false;
 
-    private void Awake() 
+
+
+    protected override void Awake() 
     {
+        base.Awake();
+
         playerControls = new PlayerControls();
         rb = GetComponent<Rigidbody2D>();
 
         myAnimator = GetComponent<Animator>();
         mySpriteRender = GetComponent<SpriteRenderer>();
-    
+
+
+   
     }
 
     private void OnEnable() {
@@ -35,6 +41,12 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         PlayerInput();
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(20);
+
+        }
     }
 
     private void FixedUpdate()
@@ -106,5 +118,11 @@ public class PlayerController : MonoBehaviour
             weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
             facingLeft = false;
         }
+    }
+
+    private void TakeDamage(int damage)
+    {
+        gameData.CurrentHealth -= damage;
+
     }
 }

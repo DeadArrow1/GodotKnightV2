@@ -274,6 +274,7 @@ GameObject:
   - component: {fileID: 8787980391872050629}
   - component: {fileID: 4444021619310171361}
   - component: {fileID: 4649943097279355797}
+  - component: {fileID: 2362000097771910850}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -338,6 +339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   weaponCollider: {fileID: 7181566661250181185}
+  gameData: {fileID: 11400000, guid: 1cdac895c257feb49afee79104bad52d, type: 2}
 --- !u!95 &4444021619310171361
 Animator:
   serializedVersion: 7
@@ -397,6 +399,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0.116579615, y: -1.7961825}
   m_Size: {x: 0.9683089, y: 0.45966628}
   m_Direction: 1
+--- !u!210 &2362000097771910850
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 927757270617118705}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
 --- !u!1 &1197352572295365785
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3745e7bea122a864b9522894a7bc8815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageAmount: 1
 --- !u!1 &6700195215962877674
 GameObject:
   m_ObjectHideFlags: 0
