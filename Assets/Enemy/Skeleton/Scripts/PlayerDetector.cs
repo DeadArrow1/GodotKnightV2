@@ -12,7 +12,7 @@ public class PlayerDetector : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Hitbox") && other.transform.parent.gameObject.tag.Equals("Player"))
         {
             myAnimator.SetTrigger("Attack");
         }

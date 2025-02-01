@@ -7,7 +7,7 @@ public class SkeletonDamage : MonoBehaviour
     [SerializeField] private GameData gamedata;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag.Equals("Player"))
+        if (other.gameObject.tag.Equals("Hitbox") && other.transform.parent.gameObject.tag.Equals("Player"))
         {
             gamedata.CurrentHealth -= damageAmount;
         }

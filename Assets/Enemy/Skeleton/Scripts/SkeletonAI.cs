@@ -14,6 +14,7 @@ public class SkeletonAI : MonoBehaviour
     public float LoS;
 
     [SerializeField] private Transform weaponCollider;
+    [SerializeField] private Transform playerDetector;
 
     private float distance;
 
@@ -52,6 +53,24 @@ public class SkeletonAI : MonoBehaviour
             transform.position = movement;
             myAnimator.SetFloat("moveX", movement.x);
             myAnimator.SetFloat("moveY", movement.y);
+
+             Vector2 direction = player.transform.position - transform.position;
+            if (direction.x > 0)
+            {
+                transform.rotation = Quaternion.Euler(0, -180, 0);
+                weaponCollider.transform.rotation = Quaternion.Euler(0, -180, 0);
+                playerDetector.transform.rotation = Quaternion.Euler(0, -180, 0);
+
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+                weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
+                playerDetector.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+            }
+
+
         }
         else 
         {
