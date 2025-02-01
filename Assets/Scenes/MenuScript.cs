@@ -14,6 +14,8 @@ public class MenuScript : MonoBehaviour
         gameData.NeededXP = 100;
         gameData.CurrentXP = 40;
 
+        gameData.ResetSkillTree();
+        gameData.GeneratePrerequisities();
     }
 
     public void OnQuitButton()

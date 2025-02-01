@@ -14,3 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _maxHealth: 100
   _currentHealth: 100
+  _neededXP: 100
+  _currentXP: 40
+  SkillTreeListSkillObtainedStatus: 000000000100000001000000000000000000000000000000000000000000000000000000000000000000000000000000
+  SkillTreeListSkillObtainableStatus: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  SkillTreeListSkillPrerequsities:
+  - -1
+  - -1
+  - -1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
