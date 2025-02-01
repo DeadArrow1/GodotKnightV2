@@ -8,11 +8,12 @@ public class SkeletonAI : MonoBehaviour
     Roaming
     }
 
-
+    private Animator myAnimator;
     private GameObject player;
     public float speed;
     public float LoS;
 
+    [SerializeField] private Transform weaponCollider;
 
     private float distance;
 
@@ -22,6 +23,7 @@ public class SkeletonAI : MonoBehaviour
 
     private void Awake()
     {
+        myAnimator = GetComponent<Animator>();
         SkeletonPathfinding = GetComponent<SkeletonPathfinding>();
         state = State.Roaming;
         player=GameObject.FindGameObjectWithTag("Player");
@@ -43,11 +45,22 @@ public class SkeletonAI : MonoBehaviour
   
         /*transform.rotation = Quaternion.Euler(Vector3.forward * angle);*/
 
-        if(distance < LoS)
+        if(distance < LoS && myAnimator.GetBool("IsAttacking") != true)
+            
         {
-            transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
-
+            Vector2 movement = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+            transform.position = movement;
+            myAnimator.SetFloat("moveX", movement.x);
+            myAnimator.SetFloat("moveY", movement.y);
         }
+        else 
+        {
+            myAnimator.SetFloat("moveX", 0);
+            myAnimator.SetFloat("moveY", 0);
+        }
+
+
+        
     }
 
     private IEnumerator RoamingRoutine()
@@ -66,4 +79,18 @@ public class SkeletonAI : MonoBehaviour
         return new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
         //return new Vector2(0, 0).normalized;
     }
+
+    //CALLED AS EVENT IN ANIMATIONS
+    private void SetIsAttackingBoolTrue()
+    {
+        myAnimator.SetBool("IsAttacking", true);
+        weaponCollider.gameObject.SetActive(true);
+    }
+    private void SetIsAttackingBoolFalse()
+    {
+        myAnimator.SetBool("IsAttacking", false);
+        weaponCollider.gameObject.SetActive(false);
+    }
+    //CALLED AS EVENT IN ANIMATIONS
+
 }
