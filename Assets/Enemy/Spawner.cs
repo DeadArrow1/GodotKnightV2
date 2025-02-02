@@ -16,32 +16,35 @@ public class Spawner : MonoBehaviour
 
     private float _timeUntilSpawn;
 
+    [SerializeField]
+    public GameData gamedata;
+
 
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        SetTimeUntilSpawn();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        _timeUntilSpawn -= Time.deltaTime;
-
-        if(_timeUntilSpawn<=0)
+        if (Input.GetKeyDown(KeyCode.F) && gamedata.showUsePrompt == true) 
+        {
+            SpawnEnemies();
+        }
+       
+    }
+    private void SpawnEnemies()
+    {
+        int enemiesCount = 5 + gamedata.AreaLevel;
+        for (int i = 0; i < enemiesCount; i++)
         {
             Spawn();
-            
-            
-            
-            
-            
-            SetTimeUntilSpawn();
         }
     }
-
     private void Spawn()
     {
         float xRange = lineend.position.x - linestart.position.x;

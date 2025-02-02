@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkeletonAI : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class SkeletonAI : MonoBehaviour
     Roaming
     }
 
+
+ 
     private Animator myAnimator;
     private GameObject player;
     public float speed;
@@ -24,11 +27,14 @@ public class SkeletonAI : MonoBehaviour
 
     private void Awake()
     {
+
         myAnimator = GetComponent<Animator>();
         SkeletonPathfinding = GetComponent<SkeletonPathfinding>();
         state = State.Roaming;
         player=GameObject.FindGameObjectWithTag("Player");
     }
+
+   
 
     private void Start()
     {
@@ -37,6 +43,7 @@ public class SkeletonAI : MonoBehaviour
 
     private void Update()
     {
+      
         distance = Vector2.Distance(transform.position, player.transform.position);
         
         /*Vector2 direction = player.transform.position - transform.position;

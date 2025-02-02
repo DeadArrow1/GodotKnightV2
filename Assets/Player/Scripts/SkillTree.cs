@@ -48,59 +48,61 @@ public class SkillTree : MonoBehaviour
 
             int obtained = CurrentlyObtainedSkills[index];
 
-
-            Toggle toggle = (Toggle)child.gameObject.GetComponent("Toggle");
-
-
-            #region Setting the sama color to selected so we LOSE selected
-            var colors = toggle.colors;
-            colors.selectedColor = colors.normalColor;
-            toggle.colors = colors;
-            #endregion
-
-
-
-            #region loading prerequisities for this skill
-            SkillPrerequisities.Clear();
-            string[] sPrerequisities = gameData.SkillTreeListSkillPrerequsities[index].Split(",");
-
-            foreach (string s in sPrerequisities)
+            if (child.gameObject.tag == "SkillPoint")
             {
-                SkillPrerequisities.Add(int.Parse(s));
-            }
-            #endregion
+                Toggle toggle = (Toggle)child.gameObject.GetComponent("Toggle");
 
-            //setting this skill to non interactable and then we will enable only if eligible
-            toggle.interactable = false;
 
-            bool SkillIsAvailable = true;
-            foreach (int requiredSkillIndex in SkillPrerequisities)
-            {
-                if (requiredSkillIndex == -1)
+                #region Setting the sama color to selected so we LOSE selected
+                var colors = toggle.colors;
+                colors.selectedColor = colors.normalColor;
+                toggle.colors = colors;
+                #endregion
+
+
+
+                #region loading prerequisities for this skill
+                SkillPrerequisities.Clear();
+                string[] sPrerequisities = gameData.SkillTreeListSkillPrerequsities[index].Split(",");
+
+                foreach (string s in sPrerequisities)
                 {
+                    SkillPrerequisities.Add(int.Parse(s));
+                }
+                #endregion
+
+                //setting this skill to non interactable and then we will enable only if eligible
+                toggle.interactable = false;
+
+                bool SkillIsAvailable = true;
+                foreach (int requiredSkillIndex in SkillPrerequisities)
+                {
+                    if (requiredSkillIndex == -1)
+                    {
+
+                    }
+                    else if (CurrentlyObtainedSkills[requiredSkillIndex] == 1)
+                    {
+
+
+                    }
+                    else
+                    {
+                        SkillIsAvailable = false;
+                        toggle.isOn = false;
+                    }
 
                 }
-                else if (CurrentlyObtainedSkills[requiredSkillIndex] == 1) 
+
+
+
+
+                if (CurrentlyObtainedSkills[index] == 0 && SkillIsAvailable == true || CurrentlyObtainedSkills[index] == 1 && gameData.SkillTreeListSkillObtainedStatus[index] == 0)
                 {
-
-
+                    toggle.interactable = true;
                 }
-                else
-                {
-                    SkillIsAvailable = false;
-                    toggle.isOn = false;
-                }
-
+                index++;
             }
-
-
-
-
-            if (CurrentlyObtainedSkills[index] == 0 && SkillIsAvailable == true || CurrentlyObtainedSkills[index] == 1 && gameData.SkillTreeListSkillObtainedStatus[index] ==0)
-            {
-                toggle.interactable = true;
-            }
-            index++;
         }
     }
 
@@ -113,18 +115,20 @@ public class SkillTree : MonoBehaviour
         //SET TOGGLE,COLOR,DISABLED, ENABLED SKILLS
         foreach (Transform child in parent)
         {
-            
-            Toggle toggle = (Toggle)child.gameObject.GetComponent("Toggle");
+            if (child.gameObject.tag == "SkillPoint")
+            {
+                Toggle toggle = (Toggle)child.gameObject.GetComponent("Toggle");
 
-            if (gameData.SkillTreeListSkillObtainedStatus[index] == 1 && toggle.isOn != true)
-            {
-                toggle.isOn = true;
+                if (gameData.SkillTreeListSkillObtainedStatus[index] == 1 && toggle.isOn != true)
+                {
+                    toggle.isOn = true;
+                }
+                if (gameData.SkillTreeListSkillObtainedStatus[index] == 0 && toggle.isOn != false)
+                {
+                    toggle.isOn = false;
+                }
+                index++;
             }
-            if (gameData.SkillTreeListSkillObtainedStatus[index] == 0 && toggle.isOn != false)
-            {
-                toggle.isOn = false;
-            }
-            index++;
         }
 
 

@@ -41,12 +41,12 @@ public class PlayerController : Singleton<PlayerController>
     private void Update()
     {
         PlayerInput();
-
-        if(Input.GetKeyDown(KeyCode.Space))
+        gameData.DetectLevelUp();
+        /*if(Input.GetKeyDown(KeyCode.Space)) 
         {
             TakeDamage(20);
 
-        }
+        }*/
     }
 
     private void FixedUpdate()
