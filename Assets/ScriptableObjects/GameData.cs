@@ -99,18 +99,86 @@ public class GameData : ScriptableObject
 
     [SerializeField]
     public  List<int> SkillTreeListSkillObtainedStatus;
-    [SerializeField]
-    public  List<int> SkillTreeListSkillObtainableStatus;
 
+    [System.Serializable]
+    public class SkillPoint
+    {
+        public int skillPointID;
+        public string skillTooltip;
+
+        public int bonusHP;
+        public int bonusHPPercent;
+
+        public int bonusDmg;
+        public int bonusDmgPercent;
+
+        public int bonusArmor;
+        public int bonusArmorPercent;
+
+        public SkillPoint(int SkillPointID, string SkillTooltip, int BonusHP, int BonusHPPercent, int BonusDmg, int BonusDmgPercent, int BonusArmor, int BonusArmorPercent)
+        {
+            skillPointID = SkillPointID;
+            skillTooltip = SkillTooltip;
+            bonusHP = BonusHP;
+            bonusHPPercent = BonusHPPercent;
+            bonusDmg = BonusDmg;
+            bonusDmgPercent = BonusDmgPercent;
+            bonusArmor = BonusArmor;
+            bonusArmorPercent = BonusArmorPercent;
+        }
+
+        public SkillPoint(int SkillPointID, int BonusHP, int BonusHPPercent, int BonusDmg, int BonusDmgPercent, int BonusArmor, int BonusArmorPercent)
+        {
+            skillPointID = SkillPointID;
+            skillTooltip = "Tooltip for skillID "+ skillPointID;
+            bonusHP = BonusHP;
+            bonusHPPercent = BonusHPPercent;
+            bonusDmg = BonusDmg;
+            bonusDmgPercent = BonusDmgPercent;
+            bonusArmor = BonusArmor;
+            bonusArmorPercent = BonusArmorPercent;
+        }
+
+        public SkillPoint(int SkillPointID)
+        {
+            skillPointID = SkillPointID;
+            skillTooltip = "Tooltip for skillID " + skillPointID;
+            bonusHP = 0;
+            bonusHPPercent = 0;
+            bonusDmg = 0;
+            bonusDmgPercent = 0;
+            bonusArmor = 0;
+            bonusArmorPercent = 0;
+        }
+    }
+
+    [SerializeField]
+    public List<SkillPoint> Skills;
+    
+    public void CreateSkillPoints()
+    {
+        Skills.Clear();
+
+        Skills.Add(new SkillPoint(0,"+50 Max HP",50,0,0,0,0,0));
+
+
+
+        int currentCount = Skills.Count;
+        for (int i = currentCount-1; i <= 74 - currentCount; i++)
+        {
+            SkillPoint skillpoint = new SkillPoint(i);
+
+            Skills.Add(skillpoint);
+        }
+    }
 
     public void ResetSkillTree()
     {
         SkillTreeListSkillObtainedStatus.Clear();
-        SkillTreeListSkillObtainableStatus.Clear();
-        for (int i = 0; i <= 76; i++)
+        for (int i = 0; i <= 74; i++)
         {
             SkillTreeListSkillObtainedStatus.Add(0);
-            SkillTreeListSkillObtainableStatus.Add(0);
+           
         }
     }
 
@@ -139,108 +207,11 @@ public class GameData : ScriptableObject
         SkillTreeListSkillPrerequsities.Add("7");
         SkillTreeListSkillPrerequsities.Add("8");
 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0"); SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0");
+        int currentCount = SkillTreeListSkillPrerequsities.Count;
+        for (int i = 0; i <= 74-currentCount; i++)
+        {
+            SkillTreeListSkillPrerequsities.Add("-1");
+        }
 
 
     }
@@ -258,8 +229,9 @@ public class GameData : ScriptableObject
         _neededXP = StartingNeededXP;
         _currentXP = 0;
         SkillpointCount = 5;
-
+         
         AreaLevel = 1;
+        CreateSkillPoints();
         ResetSkillTree();
         GeneratePrerequisities();
     }
@@ -271,7 +243,33 @@ public class GameData : ScriptableObject
             CurrentXP = CurrentXP - NeededXP;
             NeededXP = NeededXP * 2;
             SkillpointCount = SkillpointCount + 1;
+            PlayerLevel += 1;
         }
     }
 
+    public void RecalculateStats()
+    {
+        int bonusDamage = 0;
+        int bonusDamagePercent = 1;
+        int bonusHealth = 0;
+        int bonusHealthPercent = 1;
+        int bonusArmor = 0;
+        int bonusArmorPercent = 1;
+        for (int index=0;index < SkillTreeListSkillObtainedStatus.Count;index++)
+        {
+            
+            bonusHealth += Skills[index].bonusHP;
+            bonusHealthPercent += Skills[index].bonusHPPercent;
+
+            bonusDamage += Skills[index].bonusDmg;
+            bonusDamagePercent += Skills[index].bonusDmgPercent;
+
+            bonusArmor += Skills[index].bonusArmor;
+            bonusArmorPercent += Skills[index].bonusArmorPercent;
+        }
+
+        _damage = (StartingDamage + bonusDamage) * bonusDamagePercent;
+        _maxHealth = (StartingMaxHealth + bonusHealth) * bonusHealthPercent;
+        _armor = (StartingArmor + bonusArmor) * bonusArmorPercent;
+    }
 }

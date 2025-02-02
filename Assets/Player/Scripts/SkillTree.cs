@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.Text.RegularExpressions;
 using System.Linq;
+using TMPro;
 
 public class SkillTree : MonoBehaviour
 {
@@ -11,9 +12,14 @@ public class SkillTree : MonoBehaviour
 
     [SerializeField] private Button confirmButton;
 
+    [SerializeField] public TextMeshProUGUI skillPointCountTextBox;
+
     private List<int> CurrentlyObtainedSkills;
 
+    private int currentlyspentSkillpoints;
+
     private bool AudioEnabled = false;
+    private bool AdjustSkillpoints = true;
 
     // Update is called once per frame
     void OnEnable()
@@ -21,14 +27,18 @@ public class SkillTree : MonoBehaviour
         Debug.Log("SkillTreeOnEnable called");
 
         //LOAD STATE OF SKILLS
-
+        
         CurrentlyObtainedSkills = new List<int>(gameData.SkillTreeListSkillObtainedStatus);
 
         //DISPLAY CURRENT STATE OF SKILL TREE
-
+        currentlyspentSkillpoints = gameData.SkillpointCount;
+        skillPointCountTextBox.text = "Free skillpoints: " + currentlyspentSkillpoints.ToString();
         AudioEnabled = false;
         EvaluateSkills();
+
+        AdjustSkillpoints = false;
         SetToggles();
+        AdjustSkillpoints = true;
         AudioEnabled = true;
     }
 
@@ -45,8 +55,6 @@ public class SkillTree : MonoBehaviour
         //SET TOGGLE,COLOR,DISABLED, ENABLED SKILLS
         foreach (Transform child in parent)
         {
-
-            int obtained = CurrentlyObtainedSkills[index];
 
             if (child.gameObject.tag == "SkillPoint")
             {
@@ -73,34 +81,34 @@ public class SkillTree : MonoBehaviour
 
                 //setting this skill to non interactable and then we will enable only if eligible
                 toggle.interactable = false;
-
-                bool SkillIsAvailable = true;
-                foreach (int requiredSkillIndex in SkillPrerequisities)
+                if (currentlyspentSkillpoints > 0 || CurrentlyObtainedSkills[index] == 1 && gameData.SkillTreeListSkillObtainedStatus[index] == 0)
                 {
-                    if (requiredSkillIndex == -1)
+                    bool SkillIsAvailable = true;
+                    foreach (int requiredSkillIndex in SkillPrerequisities)
                     {
+                        if (requiredSkillIndex == -1)
+                        {
+
+                        }
+                        else if (CurrentlyObtainedSkills[requiredSkillIndex] == 1)
+                        {
+
+
+                        }
+                        else
+                        {
+                            SkillIsAvailable = false;
+                            toggle.isOn = false;
+                        }
 
                     }
-                    else if (CurrentlyObtainedSkills[requiredSkillIndex] == 1)
+
+                    if (CurrentlyObtainedSkills[index] == 0 && SkillIsAvailable == true || CurrentlyObtainedSkills[index] == 1 && gameData.SkillTreeListSkillObtainedStatus[index] == 0)
                     {
-
-
+                        toggle.interactable = true;
                     }
-                    else
-                    {
-                        SkillIsAvailable = false;
-                        toggle.isOn = false;
-                    }
-
                 }
 
-
-
-
-                if (CurrentlyObtainedSkills[index] == 0 && SkillIsAvailable == true || CurrentlyObtainedSkills[index] == 1 && gameData.SkillTreeListSkillObtainedStatus[index] == 0)
-                {
-                    toggle.interactable = true;
-                }
                 index++;
             }
         }
@@ -152,11 +160,21 @@ public class SkillTree : MonoBehaviour
             if (skill.isOn)
             {
                 CurrentlyObtainedSkills[skillNumber] = 1;
+                if (AdjustSkillpoints == true)
+                {
+                    currentlyspentSkillpoints--;
+                }
+                skillPointCountTextBox.text = "Free skillpoints: " + currentlyspentSkillpoints.ToString();
                 EvaluateSkills();
             }
             else 
             {
                 CurrentlyObtainedSkills[skillNumber] = 0;
+                if (AdjustSkillpoints == true)
+                {
+                    currentlyspentSkillpoints++;
+                }
+                skillPointCountTextBox.text = "Free skillpoints: " + currentlyspentSkillpoints.ToString();
                 EvaluateSkills();
             }
         }
@@ -184,7 +202,16 @@ public class SkillTree : MonoBehaviour
             var skillpointsound = gameObject.GetComponent<AudioSource>();
             skillpointsound.Play();
         }
+
         gameData.SkillTreeListSkillObtainedStatus = new List<int>(CurrentlyObtainedSkills);
+
+        gameData.SkillpointCount = currentlyspentSkillpoints;
+
+
+
+
+
         EvaluateSkills();
+        gameData.RecalculateStats();
     }
 }
