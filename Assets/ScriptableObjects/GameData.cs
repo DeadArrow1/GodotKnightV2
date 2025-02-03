@@ -6,9 +6,9 @@ using UnityEngine;
 public class GameData : ScriptableObject
 {
     //VALUES FOR INITIALIZING PLAYER AND REFERENCE FOR BASE FOR CALCULATING BONUSES
-    public int StartingMaxHealth=100;
-    public int StartingArmor=10;
-    public int StartingDamage=30;
+    public int StartingMaxHealth = 100;
+    public int StartingArmor = 10;
+    public int StartingDamage = 30;
     public int StartingNeededXP = 100;
 
     //VALUES FOR INITIALIZING PLAYER AND REFERENCE FOR BASE FOR CALCULATING BONUSES
@@ -98,7 +98,7 @@ public class GameData : ScriptableObject
     //GAMEPLAY VALUES END
 
     [SerializeField]
-    public  List<int> SkillTreeListSkillObtainedStatus;
+    public List<int> SkillTreeListSkillObtainedStatus;
 
     [System.Serializable]
     public class SkillPoint
@@ -130,7 +130,7 @@ public class GameData : ScriptableObject
         public SkillPoint(int SkillPointID, int BonusHP, int BonusHPPercent, int BonusDmg, int BonusDmgPercent, int BonusArmor, int BonusArmorPercent)
         {
             skillPointID = SkillPointID;
-            skillTooltip = "Tooltip for skillID "+ skillPointID;
+            skillTooltip = "Tooltip for skillID " + skillPointID;
             bonusHP = BonusHP;
             bonusHPPercent = BonusHPPercent;
             bonusDmg = BonusDmg;
@@ -154,17 +154,17 @@ public class GameData : ScriptableObject
 
     [SerializeField]
     public List<SkillPoint> Skills;
-    
+
     public void CreateSkillPoints()
     {
         Skills.Clear();
 
-        Skills.Add(new SkillPoint(0,"+50 Max HP",50,0,0,0,0,0));
+        Skills.Add(new SkillPoint(0, "+50 Max HP", 50, 0, 0, 0, 0, 0));
 
 
 
         int currentCount = Skills.Count;
-        for (int i = currentCount-1; i <= 74 - currentCount; i++)
+        for (int i = currentCount - 1; i <= 74 - currentCount; i++)
         {
             SkillPoint skillpoint = new SkillPoint(i);
 
@@ -178,7 +178,7 @@ public class GameData : ScriptableObject
         for (int i = 0; i <= 74; i++)
         {
             SkillTreeListSkillObtainedStatus.Add(0);
-           
+
         }
     }
 
@@ -208,7 +208,7 @@ public class GameData : ScriptableObject
         SkillTreeListSkillPrerequsities.Add("8");
 
         int currentCount = SkillTreeListSkillPrerequsities.Count;
-        for (int i = 0; i <= 74-currentCount; i++)
+        for (int i = 0; i <= 74 - currentCount; i++)
         {
             SkillTreeListSkillPrerequsities.Add("-1");
         }
@@ -216,9 +216,10 @@ public class GameData : ScriptableObject
 
     }
 
+    public bool isDead;
     public void ResetPlayer()
     {
-
+        isDead = false;
         showUsePrompt = false;
         _playerLevel = 1;
         _damage = StartingDamage;
@@ -229,16 +230,21 @@ public class GameData : ScriptableObject
         _neededXP = StartingNeededXP;
         _currentXP = 0;
         SkillpointCount = 5;
-         
+
         AreaLevel = 1;
-        CreateSkillPoints();
+
+        DamageBonusFromEncounters=0;
+        HealthBonusFromEncounters=0;
+        ArmorBonusFromEncounters=0;
+
+    CreateSkillPoints();
         ResetSkillTree();
         GeneratePrerequisities();
     }
 
     public void DetectLevelUp()
     {
-        if(CurrentXP>= NeededXP)
+        if (CurrentXP >= NeededXP)
         {
             CurrentXP = CurrentXP - NeededXP;
             NeededXP = NeededXP * 2;
@@ -255,21 +261,72 @@ public class GameData : ScriptableObject
         int bonusHealthPercent = 1;
         int bonusArmor = 0;
         int bonusArmorPercent = 1;
-        for (int index=0;index < SkillTreeListSkillObtainedStatus.Count;index++)
+        for (int index = 0; index < SkillTreeListSkillObtainedStatus.Count; index++)
         {
-            
-            bonusHealth += Skills[index].bonusHP;
-            bonusHealthPercent += Skills[index].bonusHPPercent;
 
-            bonusDamage += Skills[index].bonusDmg;
-            bonusDamagePercent += Skills[index].bonusDmgPercent;
+            bonusHealth += Skills[index].bonusHP * SkillTreeListSkillObtainedStatus[index];
+            bonusHealthPercent += Skills[index].bonusHPPercent * SkillTreeListSkillObtainedStatus[index];
 
-            bonusArmor += Skills[index].bonusArmor;
-            bonusArmorPercent += Skills[index].bonusArmorPercent;
+            bonusDamage += Skills[index].bonusDmg * SkillTreeListSkillObtainedStatus[index];
+            bonusDamagePercent += Skills[index].bonusDmgPercent * SkillTreeListSkillObtainedStatus[index];
+
+            bonusArmor += Skills[index].bonusArmor * SkillTreeListSkillObtainedStatus[index];
+            bonusArmorPercent += Skills[index].bonusArmorPercent * SkillTreeListSkillObtainedStatus[index];
         }
 
-        _damage = (StartingDamage + bonusDamage) * bonusDamagePercent;
-        _maxHealth = (StartingMaxHealth + bonusHealth) * bonusHealthPercent;
-        _armor = (StartingArmor + bonusArmor) * bonusArmorPercent;
+        _damage = (StartingDamage + bonusDamage+ DamageBonusFromEncounters) * bonusDamagePercent;
+        _maxHealth = (StartingMaxHealth + bonusHealth + HealthBonusFromEncounters) * bonusHealthPercent;
+        _armor = (StartingArmor + bonusArmor + ArmorBonusFromEncounters) * bonusArmorPercent;
     }
+
+    //ENCOUNTER CONTROLS
+    [System.Serializable]
+    public class EncounterRewards
+    {
+        public string rewardName;
+        public string description;
+        public int bonusHP;
+        public int bonusDmg;
+
+        public int bonusArmor;
+
+
+        public EncounterRewards(string RewardName, string Description, int BonusHP,  int BonusDmg,  int BonusArmor)
+        {
+            rewardName = RewardName;
+            description = Description;
+            bonusHP = BonusHP;
+            bonusDmg = BonusDmg;
+            bonusArmor = BonusArmor;
+        }
+
+    }
+
+
+    public int DamageBonusFromEncounters;
+    public int HealthBonusFromEncounters;
+    public int ArmorBonusFromEncounters;
+
+    public bool encounterStarted;
+    public bool encounterEnded;
+    public int countEnemiesInEncounter;
+    public void resetEncounterSettings()
+    {   
+        encounterStarted=false;
+        encounterEnded = false;
+        countEnemiesInEncounter = 0;
+    }
+    [SerializeField]
+    public List<EncounterRewards> EncounterRewardsOptions;
+
+    public List<int> RolledRewards;
+
+    public int SelectedRewardIndex;
+    public void prepareEncounters()
+    {
+        EncounterRewardsOptions.Clear();
+        EncounterRewardsOptions.Add(new EncounterRewards ("BONUS HP", "reward0",10,0,0)); //Add hp
+        EncounterRewardsOptions.Add(new EncounterRewards("BONUS DMG", "reward1",0,10,0)); //Add damage
+        EncounterRewardsOptions.Add(new EncounterRewards("BONUS ARMOR", "reward2",0,0,10)); //Add armor
+    } 
 }

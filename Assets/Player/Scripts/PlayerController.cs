@@ -18,6 +18,8 @@ public class PlayerController : Singleton<PlayerController>
     
     private bool facingLeft = false;
 
+    public GameManager gameManager;
+
 
 
     protected override void Awake() 
@@ -42,11 +44,13 @@ public class PlayerController : Singleton<PlayerController>
     {
         PlayerInput();
         gameData.DetectLevelUp();
-        /*if(Input.GetKeyDown(KeyCode.Space)) 
-        {
-            TakeDamage(20);
 
-        }*/
+        if (gameData.CurrentHealth <= 0 && !gameData.isDead)
+        {
+            gameData.isDead = true;
+            gameManager.gameOver();
+        }
+
     }
 
     private void FixedUpdate()

@@ -16,5 +16,7 @@ public class UsePrompt : MonoBehaviour
         {
             usePrompt.SetActive(false);
         }
+
+       
     }
 }

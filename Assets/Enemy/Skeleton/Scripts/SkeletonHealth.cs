@@ -44,6 +44,10 @@ public class SkeletonHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             gameData.CurrentXP += XPYield;
+            if (gameData.encounterStarted == true)
+            {
+                gameData.countEnemiesInEncounter = gameData.countEnemiesInEncounter - 1;
+            }
             Destroy(gameObject);
         }
     }

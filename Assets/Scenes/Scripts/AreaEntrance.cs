@@ -12,7 +12,11 @@ public class AreaEntrance : MonoBehaviour
         {
             PlayerController.Instance.transform.position = this.transform.position;
             CameraController.Instance.SetPlayerCameraFollow();
+            GameManager.Instance.findGameOverUI();
+
             gameData.AreaLevel += 1;
+            gameData.resetEncounterSettings();
+            
         }
     }
 }

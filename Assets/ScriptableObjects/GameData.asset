@@ -16,17 +16,618 @@ MonoBehaviour:
   StartingArmor: 10
   StartingDamage: 30
   StartingNeededXP: 100
-  _maxHealth: 100
-  _currentHealth: 0
-  _neededXP: 100
+  _maxHealth: 160
+  _currentHealth: -970
+  _neededXP: 400
   _currentXP: 0
-  _damage: 30
+  _damage: 40
   _armor: 10
-  _playerLevel: 2
-  AreaLevel: 1
+  _playerLevel: 3
+  SkillpointCount: 6
+  AreaLevel: 4
   showUsePrompt: 0
-  SkillTreeListSkillObtainedStatus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  SkillTreeListSkillObtainableStatus: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  SkillTreeListSkillObtainedStatus: 010000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  Skills:
+  - skillPointID: 0
+    skillTooltip: +50 Max HP
+    bonusHP: 50
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 0
+    skillTooltip: Tooltip for skillID 0
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 1
+    skillTooltip: Tooltip for skillID 1
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 2
+    skillTooltip: Tooltip for skillID 2
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 3
+    skillTooltip: Tooltip for skillID 3
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 4
+    skillTooltip: Tooltip for skillID 4
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 5
+    skillTooltip: Tooltip for skillID 5
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 6
+    skillTooltip: Tooltip for skillID 6
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 7
+    skillTooltip: Tooltip for skillID 7
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 8
+    skillTooltip: Tooltip for skillID 8
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 9
+    skillTooltip: Tooltip for skillID 9
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 10
+    skillTooltip: Tooltip for skillID 10
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 11
+    skillTooltip: Tooltip for skillID 11
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 12
+    skillTooltip: Tooltip for skillID 12
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 13
+    skillTooltip: Tooltip for skillID 13
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 14
+    skillTooltip: Tooltip for skillID 14
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 15
+    skillTooltip: Tooltip for skillID 15
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 16
+    skillTooltip: Tooltip for skillID 16
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 17
+    skillTooltip: Tooltip for skillID 17
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 18
+    skillTooltip: Tooltip for skillID 18
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 19
+    skillTooltip: Tooltip for skillID 19
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 20
+    skillTooltip: Tooltip for skillID 20
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 21
+    skillTooltip: Tooltip for skillID 21
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 22
+    skillTooltip: Tooltip for skillID 22
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 23
+    skillTooltip: Tooltip for skillID 23
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 24
+    skillTooltip: Tooltip for skillID 24
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 25
+    skillTooltip: Tooltip for skillID 25
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 26
+    skillTooltip: Tooltip for skillID 26
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 27
+    skillTooltip: Tooltip for skillID 27
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 28
+    skillTooltip: Tooltip for skillID 28
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 29
+    skillTooltip: Tooltip for skillID 29
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 30
+    skillTooltip: Tooltip for skillID 30
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 31
+    skillTooltip: Tooltip for skillID 31
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 32
+    skillTooltip: Tooltip for skillID 32
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 33
+    skillTooltip: Tooltip for skillID 33
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 34
+    skillTooltip: Tooltip for skillID 34
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 35
+    skillTooltip: Tooltip for skillID 35
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 36
+    skillTooltip: Tooltip for skillID 36
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 37
+    skillTooltip: Tooltip for skillID 37
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 38
+    skillTooltip: Tooltip for skillID 38
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 39
+    skillTooltip: Tooltip for skillID 39
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 40
+    skillTooltip: Tooltip for skillID 40
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 41
+    skillTooltip: Tooltip for skillID 41
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 42
+    skillTooltip: Tooltip for skillID 42
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 43
+    skillTooltip: Tooltip for skillID 43
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 44
+    skillTooltip: Tooltip for skillID 44
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 45
+    skillTooltip: Tooltip for skillID 45
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 46
+    skillTooltip: Tooltip for skillID 46
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 47
+    skillTooltip: Tooltip for skillID 47
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 48
+    skillTooltip: Tooltip for skillID 48
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 49
+    skillTooltip: Tooltip for skillID 49
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 50
+    skillTooltip: Tooltip for skillID 50
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 51
+    skillTooltip: Tooltip for skillID 51
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 52
+    skillTooltip: Tooltip for skillID 52
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 53
+    skillTooltip: Tooltip for skillID 53
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 54
+    skillTooltip: Tooltip for skillID 54
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 55
+    skillTooltip: Tooltip for skillID 55
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 56
+    skillTooltip: Tooltip for skillID 56
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 57
+    skillTooltip: Tooltip for skillID 57
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 58
+    skillTooltip: Tooltip for skillID 58
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 59
+    skillTooltip: Tooltip for skillID 59
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 60
+    skillTooltip: Tooltip for skillID 60
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 61
+    skillTooltip: Tooltip for skillID 61
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 62
+    skillTooltip: Tooltip for skillID 62
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 63
+    skillTooltip: Tooltip for skillID 63
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 64
+    skillTooltip: Tooltip for skillID 64
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 65
+    skillTooltip: Tooltip for skillID 65
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 66
+    skillTooltip: Tooltip for skillID 66
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 67
+    skillTooltip: Tooltip for skillID 67
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 68
+    skillTooltip: Tooltip for skillID 68
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 69
+    skillTooltip: Tooltip for skillID 69
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 70
+    skillTooltip: Tooltip for skillID 70
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 71
+    skillTooltip: Tooltip for skillID 71
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 72
+    skillTooltip: Tooltip for skillID 72
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
+  - skillPointID: 73
+    skillTooltip: Tooltip for skillID 73
+    bonusHP: 0
+    bonusHPPercent: 0
+    bonusDmg: 0
+    bonusDmgPercent: 0
+    bonusArmor: 0
+    bonusArmorPercent: 0
   SkillTreeListSkillPrerequsities:
   - -1
   - -1
@@ -43,142 +644,87 @@ MonoBehaviour:
   - 6
   - 7
   - 8
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  - -1
+  DamageBonusFromEncounters: 10
+  HealthBonusFromEncounters: 10
+  ArmorBonusFromEncounters: 0
+  encounterStarted: 0
+  encounterEnded: 0
+  countEnemiesInEncounter: 0
+  EncounterRewardsOptions:
+  - rewardName: BONUS HP
+    description: reward0
+    bonusHP: 10
+    bonusDmg: 0
+    bonusArmor: 0
+  - rewardName: BONUS DMG
+    description: reward1
+    bonusHP: 0
+    bonusDmg: 10
+    bonusArmor: 0
+  - rewardName: BONUS ARMOR
+    description: reward2
+    bonusHP: 0
+    bonusDmg: 0
+    bonusArmor: 10
+  RolledRewards: 
+  SelectedRewardIndex: 0

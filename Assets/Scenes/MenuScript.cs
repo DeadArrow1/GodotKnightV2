@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour
 
         SceneManager.LoadScene(1);
         gameData.ResetPlayer();
+        gameData.prepareEncounters();
 
     }
 

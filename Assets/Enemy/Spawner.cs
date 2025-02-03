@@ -19,27 +19,29 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     public GameData gamedata;
 
-
+    private bool spawnCompleted;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        
+        spawnCompleted = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && gamedata.showUsePrompt == true) 
+        if (gamedata.encounterStarted == true && spawnCompleted == false) 
         {
             SpawnEnemies();
+            spawnCompleted = true;
         }
        
     }
     private void SpawnEnemies()
     {
         int enemiesCount = 5 + gamedata.AreaLevel;
+        gamedata.countEnemiesInEncounter = enemiesCount;
         for (int i = 0; i < enemiesCount; i++)
         {
             Spawn();
