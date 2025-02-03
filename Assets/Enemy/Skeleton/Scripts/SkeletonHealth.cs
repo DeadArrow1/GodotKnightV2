@@ -14,12 +14,18 @@ public class SkeletonHealth : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI DamageTextValue;
 
+    private Animator myAnimator;
+
     [SerializeField]
     public Slider HPslider;
     private int currentHealth;
-
-    private void Start()
+    private void Awake()
     {
+        myAnimator = GetComponent<Animator>();
+    }
+        private void Start()
+    {
+        
         startingHealth = startingHealth + 10 * gameData.AreaLevel;
         currentHealth = startingHealth;
     }
@@ -36,6 +42,15 @@ public class SkeletonHealth : MonoBehaviour
         DamageTextValue.text ="-" + damage.ToString();
         Animator HPAnimator=DamageText.GetComponent<Animator>();
         HPAnimator.SetTrigger("DamageTaken");
+
+        if (myAnimator.GetBool("IsHurt"))
+        {
+            myAnimator.SetBool("IsHurt", false);
+        }
+        else 
+        {
+                myAnimator.SetBool("IsHurt", true);
+        }
         Debug.Log(currentHealth);
         DetectDeath();
     }

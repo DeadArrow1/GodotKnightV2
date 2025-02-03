@@ -25,7 +25,7 @@ public class SkillTree : MonoBehaviour
     void OnEnable()
     {
         Debug.Log("SkillTreeOnEnable called");
-
+        Time.timeScale = 0;
         //LOAD STATE OF SKILLS
         
         CurrentlyObtainedSkills = new List<int>(gameData.SkillTreeListSkillObtainedStatus);
@@ -42,6 +42,10 @@ public class SkillTree : MonoBehaviour
         AudioEnabled = true;
     }
 
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
+    }
 
     private void EvaluateSkills()
     {
@@ -202,7 +206,7 @@ public class SkillTree : MonoBehaviour
             var skillpointsound = gameObject.GetComponent<AudioSource>();
             skillpointsound.Play();
         }
-
+        
         gameData.SkillTreeListSkillObtainedStatus = new List<int>(CurrentlyObtainedSkills);
 
         gameData.SkillpointCount = currentlyspentSkillpoints;

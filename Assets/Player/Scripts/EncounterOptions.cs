@@ -25,6 +25,7 @@ public class EncounterOptions : MonoBehaviour
 
     void OnEnable()
     {
+        Time.timeScale = 0;
         if (gameData.RolledRewards.Count == 0)
         {
             gameData.RolledRewards.Clear();
@@ -43,6 +44,10 @@ public class EncounterOptions : MonoBehaviour
         Button2Description.text = gameData.EncounterRewardsOptions[gameData.RolledRewards[2]].description;
 
 
+    }
+    private void OnDisable()
+    {
+        Time.timeScale = 1;
     }
 
     public void FirstOptionClicked()

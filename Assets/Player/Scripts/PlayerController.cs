@@ -9,6 +9,8 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField] private Transform weaponCollider;
     [SerializeField] private GameData gameData;
 
+    [SerializeField] private SpriteAnimation Sprites;
+
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
@@ -19,6 +21,27 @@ public class PlayerController : Singleton<PlayerController>
     private bool facingLeft = false;
 
     public GameManager gameManager;
+    [SerializeField]
+    public AudioSource AttackSoundSource;
+
+
+    [SerializeField]
+    public AudioSource RunSoundSource;
+
+    [SerializeField]
+    public AudioSource LevelUpSoundSource;
+
+    [SerializeField]
+    public AudioClip Attack1;
+
+    [SerializeField]
+    public AudioClip Attack2;
+
+    [SerializeField]
+    public AudioClip Attack3;
+
+    [SerializeField]
+    public AudioClip Run;
 
 
 
@@ -43,7 +66,7 @@ public class PlayerController : Singleton<PlayerController>
     private void Update()
     {
         PlayerInput();
-        gameData.DetectLevelUp();
+        DetectLevelUp();
 
         if (gameData.CurrentHealth <= 0 && !gameData.isDead)
         {
@@ -51,6 +74,19 @@ public class PlayerController : Singleton<PlayerController>
             gameManager.gameOver();
         }
 
+    }
+
+    public void DetectLevelUp()
+    {
+        if (gameData.CurrentXP >= gameData.NeededXP)
+        {
+            gameData.CurrentXP = gameData.CurrentXP - gameData.NeededXP;
+            gameData.NeededXP = gameData.NeededXP * 2;
+            gameData.SkillpointCount = gameData.SkillpointCount + 1;
+            gameData.PlayerLevel += 1;
+            LevelUpSoundSource.Play();
+            Sprites.playAnimation();
+        }
     }
 
     private void FixedUpdate()
@@ -63,17 +99,34 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Attack()
     {
-        myAnimator.SetTrigger("Attack");
-        weaponCollider.gameObject.SetActive(true);
-        
+        if (myAnimator.GetBool("IsAttacking"))
+        {
+            myAnimator.SetBool("AttackContinues", true);
+        }
+        else
+        {
+            myAnimator.SetTrigger("Attack");
+        }
     }
 
+
+
+    public void AttackHitboxStartAnimEvent()
+    {
+        weaponCollider.gameObject.SetActive(true);
+    }
     public void DoneAttackingAnimEvent()
     {
         weaponCollider.gameObject.SetActive(false);
     }
 
     //CALLED AS EVENT IN ANIMATIONS
+
+    public void SetAttackContinuesFalse()
+    {
+        myAnimator.SetBool("AttackContinues", false);
+
+    }
     private void SetIsAttackingBoolTrue()
     {
         myAnimator.SetBool("IsAttacking", true);
@@ -128,5 +181,34 @@ public class PlayerController : Singleton<PlayerController>
     {
         gameData.CurrentHealth -= damage;
 
+    }
+
+    public void playAttackSound(int clipID)
+    {
+        if (clipID == 1)
+        {
+            AttackSoundSource.clip = Attack1;
+            AttackSoundSource.Play();
+        }
+        else if (clipID == 2)
+        {
+            AttackSoundSource.clip = Attack2;
+            AttackSoundSource.Play();
+        }
+        else if (clipID == 3)
+        {
+            AttackSoundSource.clip = Attack3;
+            AttackSoundSource.Play();
+        }
+
+    }
+
+    public void playRunSound()
+    {
+        RunSoundSource.Play();
+    }
+    public void StopRunSound()
+    {
+        RunSoundSource.Stop();
     }
 }

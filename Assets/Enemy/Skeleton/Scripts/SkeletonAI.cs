@@ -110,11 +110,25 @@ public class SkeletonAI : MonoBehaviour
     private void SetIsAttackingBoolTrue()
     {
         myAnimator.SetBool("IsAttacking", true);
-        weaponCollider.gameObject.SetActive(true);
     }
     private void SetIsAttackingBoolFalse()
     {
         myAnimator.SetBool("IsAttacking", false);
+
+    }
+
+    private void AttackHitboxActive()
+    {
+        weaponCollider.gameObject.SetActive(true);
+    }
+
+    private void SetIsHurtFalse()
+    {
+        myAnimator.SetBool("IsHurt", false);
+    }
+
+    private void AttackHitboxDeactive()
+    {
         weaponCollider.gameObject.SetActive(false);
     }
     //CALLED AS EVENT IN ANIMATIONS
