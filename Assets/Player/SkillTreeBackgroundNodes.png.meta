@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 7ef8c2fe325c7994798f426c57d341b1
+guid: 4d20fa8c12655ae43a430e656f12f0db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7842393699273424767
-    second: LitCampfireNoFlame_0
-  - first:
-      213: -140183464753619109
-    second: LitCampfireNoFlame_1
-  - first:
-      213: 2731614023311704966
-    second: LitCampfireNoFlame_2
+      213: -5015108063084586423
+    second: SkillTreeBackgroundNodes_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -119,35 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: LitCampfireNoFlame_0
+      name: SkillTreeBackgroundNodes_0
       rect:
         serializedVersion: 2
-        x: 416
-        y: 568
-        width: 108
-        height: 142
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 180cb063b783a2390800000000000000
-      internalID: -7842393699273424767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LitCampfireNoFlame_1
-      rect:
-        serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 757
-        height: 312
+        width: 1930
+        height: 2000
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5f1afba1e7fd0ef0800000000000000
-      internalID: -140183464753619109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LitCampfireNoFlame_2
-      rect:
-        serializedVersion: 2
-        x: 313
-        y: 302
-        width: 34
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 68348f24b74a8e520800000000000000
-      internalID: 2731614023311704966
+      spriteID: 94a55ada9c1c66ab0800000000000000
+      internalID: -5015108063084586423
       vertices: []
       indices: 
       edges: []
@@ -198,9 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      LitCampfireNoFlame_0: -7842393699273424767
-      LitCampfireNoFlame_1: -140183464753619109
-      LitCampfireNoFlame_2: 2731614023311704966
+      SkillTreeBackgroundNodes_0: -5015108063084586423
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

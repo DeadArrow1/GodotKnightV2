@@ -43,6 +43,8 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField]
     public AudioClip Run;
 
+    private bool IsDrinking;
+
 
 
     protected override void Awake() 
@@ -74,6 +76,17 @@ public class PlayerController : Singleton<PlayerController>
             gameManager.gameOver();
         }
 
+        if (Input.GetKeyDown(KeyCode.R) && IsDrinking == false && gameData.HealingPotionsCount>0)
+        {
+            IsDrinking = true;
+            myAnimator.SetTrigger("Drink");
+        }
+
+    }
+    public void SetIsDrinkingFalse()
+    {
+        IsDrinking = false;
+
     }
 
     public void DetectLevelUp()
@@ -84,6 +97,8 @@ public class PlayerController : Singleton<PlayerController>
             gameData.NeededXP = gameData.NeededXP * 2;
             gameData.SkillpointCount = gameData.SkillpointCount + 1;
             gameData.PlayerLevel += 1;
+            gameData.CurrentHealth = gameData.MaxHealth;
+
             LevelUpSoundSource.Play();
             Sprites.playAnimation();
         }
@@ -142,14 +157,21 @@ public class PlayerController : Singleton<PlayerController>
       
        myAnimator.SetFloat("moveX", movement.x);
        myAnimator.SetFloat("moveY", movement.y);
-       movement = playerControls.Movement.Move.ReadValue<Vector2>();
 
+        if (IsDrinking == false)
+        {
+            movement = playerControls.Movement.Move.ReadValue<Vector2>();
+        }
+        else 
+        {
+            movement = new Vector2(0, 0);
+        }
        playerControls.Combat.Attack.started += _ => Attack();
     }
 
     private void Move()
     {
-        if (myAnimator.GetBool("IsAttacking") == true)
+        if (myAnimator.GetBool("IsAttacking") == true || IsDrinking == true)
         {
             movement = new Vector2(0,0);
         }
@@ -177,6 +199,19 @@ public class PlayerController : Singleton<PlayerController>
         }
     }
 
+    public void DrankHealingPotion()
+    {
+        gameData.HealingPotionsCount = gameData.HealingPotionsCount -1;
+
+        if(gameData.CurrentHealth+50 > gameData.MaxHealth)
+        {
+            gameData.CurrentHealth = gameData.MaxHealth;
+        }
+        else { 
+            gameData.CurrentHealth = gameData.CurrentHealth + 50; 
+        }
+            
+    }
     private void TakeDamage(int damage)
     {
         gameData.CurrentHealth -= damage;

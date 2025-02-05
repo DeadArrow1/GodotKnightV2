@@ -14,6 +14,12 @@ public class SkeletonHealth : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI DamageTextValue;
 
+    [SerializeField]
+    private GameObject HealthPotionPrefab;
+
+    [SerializeField]
+    private Transform LootDropLocation;
+
     private Animator myAnimator;
 
     [SerializeField]
@@ -58,11 +64,23 @@ public class SkeletonHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
-            gameData.CurrentXP += XPYield;
+        
+
+        
+            
+                gameData.CurrentXP += XPYield;
             if (gameData.encounterStarted == true)
             {
                 gameData.countEnemiesInEncounter = gameData.countEnemiesInEncounter - 1;
             }
+
+            float DropChance = Random.value;
+            if (DropChance > 0.9)
+            {
+                GameObject spawnInstance = Instantiate(HealthPotionPrefab);
+                spawnInstance.transform.position = LootDropLocation.transform.position;
+            }
+
             Destroy(gameObject);
         }
     }

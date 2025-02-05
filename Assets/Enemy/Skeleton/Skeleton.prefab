@@ -218,6 +218,7 @@ Transform:
   - {fileID: 2084610614278717502}
   - {fileID: 537579391500687752}
   - {fileID: 3718346732926597395}
+  - {fileID: 5568061812115828547}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &9068586937088954251
@@ -322,6 +323,7 @@ MonoBehaviour:
   LoS: 30
   weaponCollider: {fileID: 8468985783955040936}
   playerDetector: {fileID: 2084610614278717502}
+  DamageDoneRect: {fileID: 8926864514911002745}
 --- !u!114 &3000647085425613526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,6 +354,8 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: 1cdac895c257feb49afee79104bad52d, type: 2}
   DamageText: {fileID: 8926864514911002745}
   DamageTextValue: {fileID: 4513750188737104691}
+  HealthPotionPrefab: {fileID: 7337213110751970164, guid: d39d6707adbcf7d49a1bd2602c735105, type: 3}
+  LootDropLocation: {fileID: 5568061812115828547}
   HPslider: {fileID: 2901673270527526254}
 --- !u!210 &8923797914995509544
 SortingGroup:
@@ -797,7 +801,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.079}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2060432966759677477
@@ -1046,13 +1050,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.2
-  m_fontSizeBase: 0.2
+  m_fontSize: 0.3
+  m_fontSizeBase: 0.3
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1637,6 +1641,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &7111176883745729360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5568061812115828547}
+  m_Layer: 0
+  m_Name: LootLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5568061812115828547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7111176883745729360}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11, y: -1.78, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2720624314094679721}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7704136198740955706
 GameObject:
   m_ObjectHideFlags: 0

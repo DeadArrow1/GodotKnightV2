@@ -92,6 +92,8 @@ public class GameData : ScriptableObject
 
     public int SkillpointCount;
 
+    public int HealingPotionsCount;
+
     public int AreaLevel = 1;
 
     public bool showUsePrompt = false;
@@ -230,7 +232,7 @@ public class GameData : ScriptableObject
         _neededXP = StartingNeededXP;
         _currentXP = 0;
         SkillpointCount = 5;
-
+        HealingPotionsCount = 3;
         AreaLevel = 1;
 
         DamageBonusFromEncounters=0;

@@ -19,6 +19,8 @@ public class SkeletonAI : MonoBehaviour
     [SerializeField] private Transform weaponCollider;
     [SerializeField] private Transform playerDetector;
 
+    [SerializeField] private Transform DamageDoneRect;
+
     private float distance;
 
 
@@ -65,6 +67,11 @@ public class SkeletonAI : MonoBehaviour
             if (direction.x > 0)
             {
                 transform.rotation = Quaternion.Euler(0, -180, 0);
+                
+                
+                DamageDoneRect.rotation = Quaternion.Euler(0, 0, 0);
+            
+
                 weaponCollider.transform.rotation = Quaternion.Euler(0, -180, 0);
                 playerDetector.transform.rotation = Quaternion.Euler(0, -180, 0);
 
@@ -72,6 +79,12 @@ public class SkeletonAI : MonoBehaviour
             else
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
+                
+                
+                DamageDoneRect.rotation = Quaternion.Euler(0, 0, 0);
+                
+                
+                
                 weaponCollider.transform.rotation = Quaternion.Euler(0, 0, 0);
                 playerDetector.transform.rotation = Quaternion.Euler(0, 0, 0);
 
