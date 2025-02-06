@@ -14,8 +14,15 @@ public class SkeletonHealth : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI DamageTextValue;
 
+    [SerializeField] private AudioSource audioHitTakenSource;
+
+    [SerializeField] private AudioClip audioHitTakenClip;
+
     [SerializeField]
     private GameObject HealthPotionPrefab;
+
+    [SerializeField]
+    private GameObject BodyPrefab;
 
     [SerializeField]
     private Transform LootDropLocation;
@@ -31,7 +38,7 @@ public class SkeletonHealth : MonoBehaviour
     }
         private void Start()
     {
-        
+        audioHitTakenSource.clip = audioHitTakenClip;
         startingHealth = startingHealth + 10 * gameData.AreaLevel;
         currentHealth = startingHealth;
     }
@@ -48,6 +55,8 @@ public class SkeletonHealth : MonoBehaviour
         DamageTextValue.text ="-" + damage.ToString();
         Animator HPAnimator=DamageText.GetComponent<Animator>();
         HPAnimator.SetTrigger("DamageTaken");
+
+        audioHitTakenSource.Play();
 
         if (myAnimator.GetBool("IsHurt"))
         {
@@ -80,6 +89,11 @@ public class SkeletonHealth : MonoBehaviour
                 GameObject spawnInstance = Instantiate(HealthPotionPrefab);
                 spawnInstance.transform.position = LootDropLocation.transform.position;
             }
+
+            GameObject spawnInstanceBody = Instantiate(BodyPrefab);
+            spawnInstanceBody.transform.position = LootDropLocation.transform.position;
+            spawnInstanceBody.transform.rotation=transform.rotation;
+
 
             Destroy(gameObject);
         }

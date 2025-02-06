@@ -77,14 +77,26 @@ public class SkillTree : MonoBehaviour
                 SkillPrerequisities.Clear();
                 string[] sPrerequisities = gameData.SkillTreeListSkillPrerequsities[index].Split(",");
 
+                bool prerequisitySatisfied = false;
+
                 foreach (string s in sPrerequisities)
                 {
                     SkillPrerequisities.Add(int.Parse(s));
+                    if (int.Parse(s) ==-1 || CurrentlyObtainedSkills[int.Parse(s)] == 1)
+                    {
+                        prerequisitySatisfied = true;
+                    }
                 }
                 #endregion
 
                 //setting this skill to non interactable and then we will enable only if eligible
                 toggle.interactable = false;
+                //TESTING
+                if (index == 16)
+                {
+                    int kekw = 1;
+                }
+                
                 if (currentlyspentSkillpoints > 0 || CurrentlyObtainedSkills[index] == 1 && gameData.SkillTreeListSkillObtainedStatus[index] == 0)
                 {
                     bool SkillIsAvailable = true;
@@ -92,12 +104,12 @@ public class SkillTree : MonoBehaviour
                     {
                         if (requiredSkillIndex == -1)
                         {
-
+                            SkillIsAvailable = true;
+                       
                         }
-                        else if (CurrentlyObtainedSkills[requiredSkillIndex] == 1)
+                        else if (prerequisitySatisfied)
                         {
-
-
+                            SkillIsAvailable = true;
                         }
                         else
                         {

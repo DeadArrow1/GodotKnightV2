@@ -24,6 +24,8 @@ public class PlayerController : Singleton<PlayerController>
     [SerializeField]
     public AudioSource AttackSoundSource;
 
+    [SerializeField]
+    public AudioSource HitTakenAudioSource;
 
     [SerializeField]
     public AudioSource RunSoundSource;
@@ -212,9 +214,32 @@ public class PlayerController : Singleton<PlayerController>
         }
             
     }
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
-        gameData.CurrentHealth -= damage;
+        int finalDamage = damage;
+        //armor = 100
+
+        //damage 101
+        //implement armor
+
+        int minimumDamage = (int)Mathf.Round((float)(damage * 0.1));
+        int substractedDamage = damage - gameData.Armor;
+
+        if (damage > gameData.Armor && minimumDamage < substractedDamage)
+        {
+            finalDamage = substractedDamage; //1 dmg
+
+
+        }
+        else 
+        {
+            finalDamage = minimumDamage;//10 dmg
+
+        }
+
+
+        HitTakenAudioSource.Play();
+        gameData.CurrentHealth -= finalDamage;
 
     }
 

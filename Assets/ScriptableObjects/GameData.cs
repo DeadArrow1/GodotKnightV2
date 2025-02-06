@@ -161,12 +161,149 @@ public class GameData : ScriptableObject
     {
         Skills.Clear();
 
-        Skills.Add(new SkillPoint(0, "+50 Max HP", 50, 0, 0, 0, 0, 0));
+        Skills.Add(new SkillPoint(0, "+20 Max HP", 20, 0, 0, 0, 0, 0));
 
 
+        Skills.Add(new SkillPoint(1, "+10 Armor", 0, 0, 0, 0, 10, 0));
+        Skills.Add(new SkillPoint(2, "+10 Damage", 0, 0, 10, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(3, "+30 Max HP", 30, 0, 0, 0, 0, 0));
+        Skills.Add(new SkillPoint(4, "+30 Max HP", 30, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(5, "+15 Armor", 0, 0, 0, 0, 15, 0));
+        Skills.Add(new SkillPoint(6, "+15 Armor", 0, 0, 0, 0, 15, 0));
+
+        Skills.Add(new SkillPoint(7, "+20 Damage", 0, 0, 20, 0, 0, 0));
+        Skills.Add(new SkillPoint(8, "+20 Damage", 0, 0, 20, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(9, "+50 Max HP", 50, 0, 0, 0, 0, 0));
+        Skills.Add(new SkillPoint(10, "+50 Max HP", 50, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(11, "+20 Armor", 0, 0, 0, 0, 20, 0));
+        Skills.Add(new SkillPoint(12, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(13, "+25 Damage", 0, 0, 25, 0, 0, 0));
+        Skills.Add(new SkillPoint(14, "+25 Damage", 0, 0, 25, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(15, "Potions heal 25% more", 0, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(16, "+5 % Max HP", 0, 5, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(17, "+20 HP,+20 Armor", 20, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(18, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(19, "+20 Damage,+20 Armor", 0, 0, 20, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(20, "+20 Damage", 0, 0, 20, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(21, "+5% Chance for enemies to drop health potion", 0, 0, 0, 0, 0, 0));
+        
+        Skills.Add(new SkillPoint(22, "Potions heal additional 25 % more", 0, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(23, "+5 % Max HP", 0, 5, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(24, "+20 HP,+20 Armor", 20, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(25, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(26, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(27, "+20 Damage,+20 Armor", 0, 0, 20, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(28, "+20 Damage", 0, 0, 20, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(29, "+5% Chance for enemies to drop health potion", 0, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(30, "Potions heal additional 25 % more", 0, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(31, "+5 % Max HP", 0, 5, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(32, "+20 HP,+20 Armor", 20, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(33, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(34, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(35, "+20 Damage,+20 Armor", 0, 0, 20, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(36, "+20 Damage", 0, 0, 20, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(37, "+5% Chance for enemies to drop health potion", 0, 0, 0, 0, 0, 0));
+        Skills.Add(new SkillPoint(38, "Potions heal additional 25 % more + 10 % of Max HP", 0, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(39, "+5 % Max HP", 0, 5, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(40, "+20 HP,+20 Armor", 20, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(41, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(42, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(43, "+20 Damage,+20 Armor", 0, 0, 20, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(44, "+20 Damage", 0, 0, 20, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(45, "+5% Chance for enemies to drop health potion, potions now drop in pair", 0, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(46, "+5 % Max HP", 0, 5, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(47, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(48, "+20 Armor", 0, 0, 0, 0, 20, 0));
+
+        Skills.Add(new SkillPoint(49, "+20 Damage", 0, 0, 20, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(50, "+100 HP", 100, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(51, "+10 % HP", 0, 10, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(52, "+20 % Armor", 0, 0, 0, 0, 0, 20));
+
+        Skills.Add(new SkillPoint(53, "50 Damage", 0, 0, 50, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(54, "50 Armor", 0, 0, 0, 0, 50, 0));
+
+        Skills.Add(new SkillPoint(55, "+100 HP", 100, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(56, "+100 HP,+10 % HP", 100, 10, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(57, "50 Armor", 0, 0, 0, 0, 50, 0));
+
+        Skills.Add(new SkillPoint(58, "+20 % Armor", 0, 0, 0, 0, 0, 20));
+
+        Skills.Add(new SkillPoint(59, "50 Damage", 0, 0, 50, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(60, "+100 HP,+10 % HP", 100, 10, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(61, "+50 HP,+50 Damage", 100, 0, 50, 0, 0, 0));
+        Skills.Add(new SkillPoint(62, "+100 HP,+10 % HP", 100, 10, 0, 0, 0, 0));
+        Skills.Add(new SkillPoint(63, "50 Armor", 0, 0, 0, 0, 50, 0));
+
+        Skills.Add(new SkillPoint(64, "+20 % Armor", 0, 0, 0, 0, 0, 20));
+
+        Skills.Add(new SkillPoint(65, "+50 Armor,+20 % Armor", 0, 0, 0, 0, 50, 20));
+
+        Skills.Add(new SkillPoint(66, "50 Damage", 0, 0, 50, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(67, "+100 HP", 100, 0, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(68, "+10 % HP", 0, 10, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(69, "50 Armor", 0, 0, 0, 0, 50, 0));
+
+        Skills.Add(new SkillPoint(70, "+50 Armor,+20 % Armor", 0, 0, 0, 0, 50, 20));
+
+        Skills.Add(new SkillPoint(71, "50 Damage", 0, 0, 50, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(72, "+200 HP,+20 % HP", 100, 20, 0, 0, 0, 0));
+
+        Skills.Add(new SkillPoint(73, "+100 % Armor", 0, 0, 0, 0, 0, 100));
+
+        Skills.Add(new SkillPoint(74, "+50 % Damage", 0, 0, 0, 50, 0, 0));
 
         int currentCount = Skills.Count;
-        for (int i = currentCount - 1; i <= 74 - currentCount; i++)
+        for (int i = currentCount; i <= 74; i++)
         {
             SkillPoint skillpoint = new SkillPoint(i);
 
@@ -190,30 +327,106 @@ public class GameData : ScriptableObject
     {
         SkillTreeListSkillPrerequsities.Clear();
 
-        SkillTreeListSkillPrerequsities.Add("-1");
-        SkillTreeListSkillPrerequsities.Add("-1"); //FIRST ROW
-        SkillTreeListSkillPrerequsities.Add("-1");
+        SkillTreeListSkillPrerequsities.Add("-1");//0
+        SkillTreeListSkillPrerequsities.Add("-1");//1 
+        SkillTreeListSkillPrerequsities.Add("-1");//2
 
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("0");
-        SkillTreeListSkillPrerequsities.Add("1");//SECOND ROW
-        SkillTreeListSkillPrerequsities.Add("1");
-        SkillTreeListSkillPrerequsities.Add("2");
-        SkillTreeListSkillPrerequsities.Add("2");
+        SkillTreeListSkillPrerequsities.Add("0");//3
+        SkillTreeListSkillPrerequsities.Add("0");//4
+        SkillTreeListSkillPrerequsities.Add("1");//5
+        SkillTreeListSkillPrerequsities.Add("1");//6
+        SkillTreeListSkillPrerequsities.Add("2");//7
+        SkillTreeListSkillPrerequsities.Add("2");//8
 
 
-        SkillTreeListSkillPrerequsities.Add("3");
-        SkillTreeListSkillPrerequsities.Add("4");
-        SkillTreeListSkillPrerequsities.Add("5");
-        SkillTreeListSkillPrerequsities.Add("6");//THIRD ROW
-        SkillTreeListSkillPrerequsities.Add("7");
-        SkillTreeListSkillPrerequsities.Add("8");
+        SkillTreeListSkillPrerequsities.Add("3");//9
+        SkillTreeListSkillPrerequsities.Add("4");//10
 
-        int currentCount = SkillTreeListSkillPrerequsities.Count;
+
+
+        SkillTreeListSkillPrerequsities.Add("5");//11
+        SkillTreeListSkillPrerequsities.Add("6");//12
+        SkillTreeListSkillPrerequsities.Add("7");//13
+        SkillTreeListSkillPrerequsities.Add("8");//14
+        SkillTreeListSkillPrerequsities.Add("9");//15
+        SkillTreeListSkillPrerequsities.Add("9,10");//16
+        SkillTreeListSkillPrerequsities.Add("10,11");//17
+        SkillTreeListSkillPrerequsities.Add("11,12");//18
+        SkillTreeListSkillPrerequsities.Add("12,13");//19
+        SkillTreeListSkillPrerequsities.Add("13,14");//20
+
+        SkillTreeListSkillPrerequsities.Add("14");//21
+        SkillTreeListSkillPrerequsities.Add("15");//22
+        SkillTreeListSkillPrerequsities.Add("16");//23
+        SkillTreeListSkillPrerequsities.Add("17");//24
+        SkillTreeListSkillPrerequsities.Add("18");//25
+        SkillTreeListSkillPrerequsities.Add("18");//26
+        SkillTreeListSkillPrerequsities.Add("19");//27
+        SkillTreeListSkillPrerequsities.Add("20");//28
+        SkillTreeListSkillPrerequsities.Add("21");//29
+        SkillTreeListSkillPrerequsities.Add("22");//30
+
+        SkillTreeListSkillPrerequsities.Add("23");//31
+        SkillTreeListSkillPrerequsities.Add("24");//32
+        SkillTreeListSkillPrerequsities.Add("25");//33
+        SkillTreeListSkillPrerequsities.Add("26");//34
+        SkillTreeListSkillPrerequsities.Add("27");//35
+        SkillTreeListSkillPrerequsities.Add("28");//36
+        SkillTreeListSkillPrerequsities.Add("29");//37
+        SkillTreeListSkillPrerequsities.Add("30");//38
+        SkillTreeListSkillPrerequsities.Add("31");//39
+        SkillTreeListSkillPrerequsities.Add("32");//40
+
+        SkillTreeListSkillPrerequsities.Add("33");//41-50
+        SkillTreeListSkillPrerequsities.Add("34");//42
+        SkillTreeListSkillPrerequsities.Add("35");//43
+        SkillTreeListSkillPrerequsities.Add("36");//44
+        SkillTreeListSkillPrerequsities.Add("37");//45
+        SkillTreeListSkillPrerequsities.Add("39");//46
+        SkillTreeListSkillPrerequsities.Add("41");//47
+        SkillTreeListSkillPrerequsities.Add("42");//48
+        SkillTreeListSkillPrerequsities.Add("44");//49
+        SkillTreeListSkillPrerequsities.Add("46");//50
+
+        SkillTreeListSkillPrerequsities.Add("46");//51
+        SkillTreeListSkillPrerequsities.Add("47,48");//52
+        SkillTreeListSkillPrerequsities.Add("49");//53
+        SkillTreeListSkillPrerequsities.Add("49");//54
+        SkillTreeListSkillPrerequsities.Add("50,56");//55
+        SkillTreeListSkillPrerequsities.Add("55,57");//56
+        SkillTreeListSkillPrerequsities.Add("56,51");//57
+        SkillTreeListSkillPrerequsities.Add("52");//58
+        SkillTreeListSkillPrerequsities.Add("53,60");//59
+        SkillTreeListSkillPrerequsities.Add("59,61");//60
+
+        SkillTreeListSkillPrerequsities.Add("60,54");//61
+        SkillTreeListSkillPrerequsities.Add("55");//62
+        SkillTreeListSkillPrerequsities.Add("57");//63
+        SkillTreeListSkillPrerequsities.Add("58");//64
+        SkillTreeListSkillPrerequsities.Add("59");//65
+        SkillTreeListSkillPrerequsities.Add("61");//66
+        SkillTreeListSkillPrerequsities.Add("62");//67
+        SkillTreeListSkillPrerequsities.Add("63");//68
+        SkillTreeListSkillPrerequsities.Add("64");//69
+        SkillTreeListSkillPrerequsities.Add("65");//70
+
+        SkillTreeListSkillPrerequsities.Add("66");//71
+        SkillTreeListSkillPrerequsities.Add("67,68");//72
+        SkillTreeListSkillPrerequsities.Add("69");//73
+        SkillTreeListSkillPrerequsities.Add("70,71");//74
+
+
+
+
+
+
+
+
+        /*int currentCount = SkillTreeListSkillPrerequsities.Count;
         for (int i = 0; i <= 74 - currentCount; i++)
         {
             SkillTreeListSkillPrerequsities.Add("-1");
-        }
+        }*/
 
 
     }
@@ -231,7 +444,7 @@ public class GameData : ScriptableObject
 
         _neededXP = StartingNeededXP;
         _currentXP = 0;
-        SkillpointCount = 5;
+        SkillpointCount = 100;
         HealingPotionsCount = 3;
         AreaLevel = 1;
 
@@ -258,27 +471,26 @@ public class GameData : ScriptableObject
     public void RecalculateStats()
     {
         int bonusDamage = 0;
-        int bonusDamagePercent = 1;
+        int bonusDamagePercent = 100;
         int bonusHealth = 0;
-        int bonusHealthPercent = 1;
+        int bonusHealthPercent = 100;
         int bonusArmor = 0;
-        int bonusArmorPercent = 1;
+        int bonusArmorPercent = 100;
         for (int index = 0; index < SkillTreeListSkillObtainedStatus.Count; index++)
         {
-
             bonusHealth += Skills[index].bonusHP * SkillTreeListSkillObtainedStatus[index];
-            bonusHealthPercent += Skills[index].bonusHPPercent * SkillTreeListSkillObtainedStatus[index];
-
             bonusDamage += Skills[index].bonusDmg * SkillTreeListSkillObtainedStatus[index];
-            bonusDamagePercent += Skills[index].bonusDmgPercent * SkillTreeListSkillObtainedStatus[index];
-
             bonusArmor += Skills[index].bonusArmor * SkillTreeListSkillObtainedStatus[index];
-            bonusArmorPercent += Skills[index].bonusArmorPercent * SkillTreeListSkillObtainedStatus[index];
+
+
+            bonusHealthPercent += Skills[index].bonusHPPercent * SkillTreeListSkillObtainedStatus[index];
+            bonusDamagePercent += Skills[index].bonusDmgPercent * SkillTreeListSkillObtainedStatus[index];
+            bonusArmorPercent  += Skills[index].bonusArmorPercent * SkillTreeListSkillObtainedStatus[index];
         }
 
-        _damage = (StartingDamage + bonusDamage+ DamageBonusFromEncounters) * bonusDamagePercent;
-        _maxHealth = (StartingMaxHealth + bonusHealth + HealthBonusFromEncounters) * bonusHealthPercent;
-        _armor = (StartingArmor + bonusArmor + ArmorBonusFromEncounters) * bonusArmorPercent;
+        _damage = (int)Mathf.Round((float)((StartingDamage + bonusDamage+ DamageBonusFromEncounters) * bonusDamagePercent/100.0));
+        _maxHealth = (int)Mathf.Round((float)((StartingMaxHealth + bonusHealth + HealthBonusFromEncounters) * bonusHealthPercent/100.0));
+        _armor = (int)Mathf.Round((float)((StartingArmor + bonusArmor + ArmorBonusFromEncounters) * bonusArmorPercent/100.0));
     }
 
     //ENCOUNTER CONTROLS

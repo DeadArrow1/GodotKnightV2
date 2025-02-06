@@ -1,0 +1,1560 @@
+fileFormatVersion: 2
+guid: 284adf067bb786341a5b134ce49c8075
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7384493497859595284
+    second: KeyboardBinds_0
+  - first:
+      213: -6134483372915421292
+    second: KeyboardBinds_1
+  - first:
+      213: 675403608267271926
+    second: KeyboardBinds_2
+  - first:
+      213: 3616038226502302933
+    second: KeyboardBinds_3
+  - first:
+      213: 2573962056330325370
+    second: KeyboardBinds_4
+  - first:
+      213: -2951451760578628617
+    second: KeyboardBinds_5
+  - first:
+      213: 7928704265445146447
+    second: KeyboardBinds_6
+  - first:
+      213: -5146646208769695454
+    second: KeyboardBinds_7
+  - first:
+      213: 2940163000510472292
+    second: KeyboardBinds_8
+  - first:
+      213: 2634322882824619742
+    second: KeyboardBinds_9
+  - first:
+      213: 5986641525301191329
+    second: KeyboardBinds_10
+  - first:
+      213: -3444370002696133400
+    second: KeyboardBinds_11
+  - first:
+      213: -3794089042173753577
+    second: KeyboardBinds_12
+  - first:
+      213: -6670914334072624272
+    second: KeyboardBinds_13
+  - first:
+      213: -62006979093474891
+    second: KeyboardBinds_14
+  - first:
+      213: 3409061635158005703
+    second: KeyboardBinds_15
+  - first:
+      213: -6712137444332255848
+    second: KeyboardBinds_16
+  - first:
+      213: 7901243093524444942
+    second: KeyboardBinds_17
+  - first:
+      213: -5644922847345618347
+    second: KeyboardBinds_18
+  - first:
+      213: -3200387306723757938
+    second: KeyboardBinds_19
+  - first:
+      213: 5218939020975430403
+    second: KeyboardBinds_20
+  - first:
+      213: 9107977759539487496
+    second: KeyboardBinds_21
+  - first:
+      213: 586097283819954990
+    second: KeyboardBinds_22
+  - first:
+      213: -464055057593010593
+    second: KeyboardBinds_23
+  - first:
+      213: 7627826690844385841
+    second: KeyboardBinds_24
+  - first:
+      213: -2445820146590468351
+    second: KeyboardBinds_25
+  - first:
+      213: -624245355908313450
+    second: KeyboardBinds_26
+  - first:
+      213: 1208178626965507391
+    second: KeyboardBinds_27
+  - first:
+      213: 3336427005988796518
+    second: KeyboardBinds_28
+  - first:
+      213: 5817481913714712224
+    second: KeyboardBinds_29
+  - first:
+      213: -2810852221893699769
+    second: KeyboardBinds_30
+  - first:
+      213: 1936714280395912369
+    second: KeyboardBinds_31
+  - first:
+      213: -453207444505687216
+    second: KeyboardBinds_32
+  - first:
+      213: -3409762501030649365
+    second: KeyboardBinds_33
+  - first:
+      213: -4943217965588614561
+    second: KeyboardBinds_34
+  - first:
+      213: 1566845965896797457
+    second: KeyboardBinds_35
+  - first:
+      213: -5289225361908946859
+    second: KeyboardBinds_36
+  - first:
+      213: -4877528109626988078
+    second: KeyboardBinds_37
+  - first:
+      213: -7435138932675137132
+    second: KeyboardBinds_38
+  - first:
+      213: -4437578860447434144
+    second: KeyboardBinds_39
+  - first:
+      213: -363654330373479573
+    second: KeyboardBinds_40
+  - first:
+      213: 1791214756828356152
+    second: KeyboardBinds_41
+  - first:
+      213: -6053287863665705771
+    second: KeyboardBinds_42
+  - first:
+      213: -9039434782162503183
+    second: KeyboardBinds_43
+  - first:
+      213: 7538488071255428216
+    second: KeyboardBinds_44
+  - first:
+      213: -8445762190363748696
+    second: KeyboardBinds_45
+  - first:
+      213: -6476080255245841059
+    second: KeyboardBinds_46
+  - first:
+      213: -3735173028718375746
+    second: KeyboardBinds_47
+  - first:
+      213: 1835802974527140049
+    second: KeyboardBinds_48
+  - first:
+      213: 4092414441088531130
+    second: KeyboardBinds_49
+  - first:
+      213: -7110838322814451075
+    second: KeyboardBinds_50
+  - first:
+      213: -9176214904128588106
+    second: KeyboardBinds_51
+  - first:
+      213: 6998315363049383966
+    second: KeyboardBinds_52
+  - first:
+      213: 3028584478887070261
+    second: KeyboardBinds_53
+  - first:
+      213: -2657465582158573717
+    second: KeyboardBinds_54
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KeyboardBinds_0
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 685
+        width: 37
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c5a1a26bdfa7660800000000000000
+      internalID: 7384493497859595284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_1
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 685
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49f06dccfdfeddaa0800000000000000
+      internalID: -6134483372915421292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_2
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 685
+        width: 28
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fea9c6d0048f5900800000000000000
+      internalID: 675403608267271926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_3
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 721
+        width: 83
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dc37e0cb9fbe2230800000000000000
+      internalID: 3616038226502302933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_4
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 728
+        width: 25
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d27e05adc88b320800000000000000
+      internalID: 2573962056330325370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_5
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 721
+        width: 326
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f3720fd2465a07d0800000000000000
+      internalID: -2951451760578628617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_6
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 721
+        width: 326
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4f7bf6758a680e60800000000000000
+      internalID: 7928704265445146447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_7
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 721
+        width: 326
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221ebad8a807398b0800000000000000
+      internalID: -5146646208769695454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_8
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 721
+        width: 245
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4606c2bdbae8dc820800000000000000
+      internalID: 2940163000510472292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_9
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 717
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed6c17664befe8420800000000000000
+      internalID: 2634322882824619742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_10
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 684
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a22e29afb2d41350800000000000000
+      internalID: 5986641525301191329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_11
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 717
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e4294a4bb32330d0800000000000000
+      internalID: -3444370002696133400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_12
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 685
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717080b3e10b85bc0800000000000000
+      internalID: -3794089042173753577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_13
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 685
+        width: 11
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b2a86d1c62c63a0800000000000000
+      internalID: -6670914334072624272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_14
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 685
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b1d9852bf4b32ff0800000000000000
+      internalID: -62006979093474891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_15
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 684
+        width: 26
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c75105ce7b6f4f20800000000000000
+      internalID: 3409061635158005703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_16
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 685
+        width: 11
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8954afa8e82b9d2a0800000000000000
+      internalID: -6712137444332255848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_17
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 684
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0778812bbad6ad60800000000000000
+      internalID: 7901243093524444942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_18
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 228
+        width: 1385
+        height: 487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5525a73149439a1b0800000000000000
+      internalID: -5644922847345618347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_19
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 553
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e80bf0f63b0f593d0800000000000000
+      internalID: -3200387306723757938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_20
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 540
+        width: 29
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30b5aa173656d6840800000000000000
+      internalID: 5218939020975430403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_21
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 553
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80362832489066e70800000000000000
+      internalID: 9107977759539487496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_22
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 554
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23e8e5df5c322800800000000000000
+      internalID: 586097283819954990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_23
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 554
+        width: 14
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56f1ff32685f89f0800000000000000
+      internalID: -464055057593010593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_24
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 554
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 132e50c16fb7bd960800000000000000
+      internalID: 7627826690844385841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_25
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 553
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1073bf10983be0ed0800000000000000
+      internalID: -2445820146590468351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_26
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 553
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69ec56cf72c3657f0800000000000000
+      internalID: -624245355908313450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_27
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 554
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3d8f7d5f0054c010800000000000000
+      internalID: 1208178626965507391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_28
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 553
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6687bfe4fae5d4e20800000000000000
+      internalID: 3336427005988796518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_29
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 553
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae993a6af8dbb050800000000000000
+      internalID: 5817481913714712224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_30
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 554
+        width: 20
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74798e5fbc8ddf8d0800000000000000
+      internalID: -2810852221893699769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_31
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 519
+        width: 245
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b4bc6a706790ea10800000000000000
+      internalID: 1936714280395912369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_32
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 276
+        width: 326
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05b0dacfa32e5b9f0800000000000000
+      internalID: -453207444505687216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_33
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 464
+        width: 47
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1ee9d22171ea0d0800000000000000
+      internalID: -3409762501030649365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_34
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 463
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f52f2c95379266bb0800000000000000
+      internalID: -4943217965588614561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_35
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 463
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11d480fba1e8eb510800000000000000
+      internalID: 1566845965896797457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_36
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 463
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5582e6e8e85e896b0800000000000000
+      internalID: -5289225361908946859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_37
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 464
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d963bbc60a8f4cb0800000000000000
+      internalID: -4877528109626988078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_38
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 463
+        width: 24
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491b836a88411d890800000000000000
+      internalID: -7435138932675137132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_39
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 464
+        width: 26
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06a7f38a98d8a62c0800000000000000
+      internalID: -4437578860447434144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_40
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 463
+        width: 18
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b636e01305a04faf0800000000000000
+      internalID: -363654330373479573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_41
+      rect:
+        serializedVersion: 2
+        x: 1809
+        y: 276
+        width: 245
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e1131c45cabd810800000000000000
+      internalID: 1791214756828356152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_42
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 171
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dcb50b72c66efba0800000000000000
+      internalID: -6053287863665705771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_43
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 160
+        width: 24
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9b4e665f97d8280800000000000000
+      internalID: -9039434782162503183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_44
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 172
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87c03bec5f61e9860800000000000000
+      internalID: 7538488071255428216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_45
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 199
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a691f11900aaca80800000000000000
+      internalID: -8445762190363748696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_46
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 172
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d8621d1575026a0800000000000000
+      internalID: -6476080255245841059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_47
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 172
+        width: 12
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc0f909beff92cc0800000000000000
+      internalID: -3735173028718375746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_48
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 171
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0bb4e24151a7910800000000000000
+      internalID: 1835802974527140049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_49
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 171
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abab2ca604d2bc830800000000000000
+      internalID: 4092414441088531130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_50
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 172
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d720961683a315d90800000000000000
+      internalID: -7110838322814451075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_51
+      rect:
+        serializedVersion: 2
+        x: 1498
+        y: 171
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b635c0992987a080800000000000000
+      internalID: -9176214904128588106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_52
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 172
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e18a7b87eb20f1160800000000000000
+      internalID: 6998315363049383966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_53
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 171
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53a43549981b70a20800000000000000
+      internalID: 3028584478887070261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyboardBinds_54
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 171
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6f8c940229ce1bd0800000000000000
+      internalID: -2657465582158573717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      KeyboardBinds_0: 7384493497859595284
+      KeyboardBinds_1: -6134483372915421292
+      KeyboardBinds_10: 5986641525301191329
+      KeyboardBinds_11: -3444370002696133400
+      KeyboardBinds_12: -3794089042173753577
+      KeyboardBinds_13: -6670914334072624272
+      KeyboardBinds_14: -62006979093474891
+      KeyboardBinds_15: 3409061635158005703
+      KeyboardBinds_16: -6712137444332255848
+      KeyboardBinds_17: 7901243093524444942
+      KeyboardBinds_18: -5644922847345618347
+      KeyboardBinds_19: -3200387306723757938
+      KeyboardBinds_2: 675403608267271926
+      KeyboardBinds_20: 5218939020975430403
+      KeyboardBinds_21: 9107977759539487496
+      KeyboardBinds_22: 586097283819954990
+      KeyboardBinds_23: -464055057593010593
+      KeyboardBinds_24: 7627826690844385841
+      KeyboardBinds_25: -2445820146590468351
+      KeyboardBinds_26: -624245355908313450
+      KeyboardBinds_27: 1208178626965507391
+      KeyboardBinds_28: 3336427005988796518
+      KeyboardBinds_29: 5817481913714712224
+      KeyboardBinds_3: 3616038226502302933
+      KeyboardBinds_30: -2810852221893699769
+      KeyboardBinds_31: 1936714280395912369
+      KeyboardBinds_32: -453207444505687216
+      KeyboardBinds_33: -3409762501030649365
+      KeyboardBinds_34: -4943217965588614561
+      KeyboardBinds_35: 1566845965896797457
+      KeyboardBinds_36: -5289225361908946859
+      KeyboardBinds_37: -4877528109626988078
+      KeyboardBinds_38: -7435138932675137132
+      KeyboardBinds_39: -4437578860447434144
+      KeyboardBinds_4: 2573962056330325370
+      KeyboardBinds_40: -363654330373479573
+      KeyboardBinds_41: 1791214756828356152
+      KeyboardBinds_42: -6053287863665705771
+      KeyboardBinds_43: -9039434782162503183
+      KeyboardBinds_44: 7538488071255428216
+      KeyboardBinds_45: -8445762190363748696
+      KeyboardBinds_46: -6476080255245841059
+      KeyboardBinds_47: -3735173028718375746
+      KeyboardBinds_48: 1835802974527140049
+      KeyboardBinds_49: 4092414441088531130
+      KeyboardBinds_5: -2951451760578628617
+      KeyboardBinds_50: -7110838322814451075
+      KeyboardBinds_51: -9176214904128588106
+      KeyboardBinds_52: 6998315363049383966
+      KeyboardBinds_53: 3028584478887070261
+      KeyboardBinds_54: -2657465582158573717
+      KeyboardBinds_6: 7928704265445146447
+      KeyboardBinds_7: -5146646208769695454
+      KeyboardBinds_8: 2940163000510472292
+      KeyboardBinds_9: 2634322882824619742
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
