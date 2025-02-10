@@ -26,6 +26,7 @@ public class GameData : ScriptableObject
         set { _maxHealth = value; }
     }
 
+    public string cheatcodeProgress="";
 
     [SerializeField]
     private int _currentHealth;
@@ -435,6 +436,7 @@ public class GameData : ScriptableObject
     public bool isDead;
     public void ResetPlayer()
     {
+        cheatcodeProgress = "";
         isDead = false;
         showUsePrompt = false;
         _playerLevel = 1;
@@ -445,7 +447,7 @@ public class GameData : ScriptableObject
 
         _neededXP = StartingNeededXP;
         _currentXP = 0;
-        SkillpointCount = 100;
+        SkillpointCount = 0;
         HealingPotionsCount = 3;
         AreaLevel = 1;
 
@@ -458,21 +460,13 @@ public class GameData : ScriptableObject
         GeneratePrerequisities();
 
 
-        Inventory.Clear();
-        itemID = 0;
-        //single image
+        Inventory.Clear();     
         Inventory.Add(new Item(0,"Cavalier Helmet", ItemSlot.Helmet, "GameSIzeAssets/ArmorSets/Cavalier/Head", "GameSIzeAssets/ArmorSets/Cavalier/Head"));
         Inventory.Add(new Item(1,"Cavalier Chest", ItemSlot.Chest, "GameSIzeAssets/ArmorSets/Cavalier/Chest", "GameSIzeAssets/ArmorSets/Cavalier/Chest"));
-        //single
-
-        //pair
-        Inventory.Add(new Item(2,"Cavalier Shoulders", ItemSlot.Shoulders, "GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm", "GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm"));
-        Inventory.Add(new Item(3,"Cavalier Gauntlets", ItemSlot.Gauntlets, "GameSIzeAssets/ArmorSets/Cavalier/RightLowerArm", "GameSIzeAssets/ArmorSets/Cavalier/RightLowerArm"));
-
-        Inventory.Add(new Item(4,"Cavalier Leggins", ItemSlot.Leggins, "GameSIzeAssets/ArmorSets/Cavalier/RightUpperLeg", "GameSIzeAssets/ArmorSets/Cavalier/RightUpperLeg"));
-
-
-        Inventory.Add(new Item(5,"Cavalier Boots", ItemSlot.Boots, "GameSIzeAssets/ArmorSets/Cavalier/RightLowerLeg", "GameSIzeAssets/ArmorSets/Cavalier/RightLowerLeg"));
+        Inventory.Add(new Item(2,"Cavalier Shoulders", ItemSlot.Shoulders, "GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm", "GameSIzeAssets/ArmorSets/Cavalier/CavalierShoulders"));
+        Inventory.Add(new Item(3,"Cavalier Gauntlets", ItemSlot.Gauntlets, "GameSIzeAssets/ArmorSets/Cavalier/RightLowerArm", "GameSIzeAssets/ArmorSets/Cavalier/CavalierGauntlets"));
+        Inventory.Add(new Item(4,"Cavalier Leggins", ItemSlot.Leggins, "GameSIzeAssets/ArmorSets/Cavalier/RightUpperLeg", "GameSIzeAssets/ArmorSets/Cavalier/CavalierLeggins"));
+        Inventory.Add(new Item(5,"Cavalier Boots", ItemSlot.Boots, "GameSIzeAssets/ArmorSets/Cavalier/RightLowerLeg", "GameSIzeAssets/ArmorSets/Cavalier/CavalierBoots"));
 
         //TEST DELETE LATER
         //Inventory.Add(new Item(6, "Cavalier Helmet2", ItemSlot.Helmet, "GameSIzeAssets/ArmorSets/Cavalier/Chest", "GameSIzeAssets/ArmorSets/Cavalier/Chest"));
@@ -565,9 +559,9 @@ public class GameData : ScriptableObject
         EncounterRewardsOptions.Add(new EncounterRewards("Power", "+10 Damage", 0,10,0)); //Add damage
         EncounterRewardsOptions.Add(new EncounterRewards("Protection", "+10 Armor", 0,0,10)); //Add armor
 
-        EncounterRewardsOptions.Add(new EncounterRewards("BONUS HP", "reward0", 10, 0, 0)); //Add hp
-        EncounterRewardsOptions.Add(new EncounterRewards("BONUS DMG", "reward1", 0, 10, 0)); //Add damage
-        EncounterRewardsOptions.Add(new EncounterRewards("BONUS ARMOR", "reward2", 0, 0, 10)); //Add armor
+        EncounterRewardsOptions.Add(new EncounterRewards("Greater Tenacity", "+20 Health", 20, 0, 0)); //Add hp
+        EncounterRewardsOptions.Add(new EncounterRewards("Greater Power", "+15 Damage", 0, 15, 0)); //Add damage
+        EncounterRewardsOptions.Add(new EncounterRewards("Greater Protection", "+15 Armor", 0, 0, 15)); //Add armor
 
     }
 
@@ -585,7 +579,7 @@ public class GameData : ScriptableObject
         Undefined
     }
 
-    int itemID=0;
+  
 
     [System.Serializable]
     public class Item

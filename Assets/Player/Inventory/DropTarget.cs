@@ -76,6 +76,12 @@ public class DropTarget : MonoBehaviour, IDropHandler
                         gameData.PlayerUpdateVisual = true;
                     }
 
+
+                    AudioSource audioSource = draggedItem.GetComponent<AudioSource>();
+                    AudioClip clipToPlay = (AudioClip)Resources.Load("DropToSlotItem", typeof(AudioClip));
+                    audioSource.clip = clipToPlay;
+                    audioSource.Play();
+
                     // Set the dragged item's position to the drop target's position
 
                     //draggedRectTransform.anchoredPosition = dropTargetRectTransform.anchoredPosition;
@@ -131,6 +137,15 @@ public class DropTarget : MonoBehaviour, IDropHandler
                         Equipment.Boots = null;
                         gameData.PlayerUpdateVisual = true;
                     }
+
+
+                    AudioSource audioSource = draggedItem.GetComponent<AudioSource>();
+                    AudioClip clipToPlay = (AudioClip)Resources.Load("HoldItem", typeof(AudioClip));
+                    audioSource.clip = clipToPlay;
+                    audioSource.Play();
+
+
+
                 }
 
 

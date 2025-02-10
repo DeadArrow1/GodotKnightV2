@@ -11,7 +11,7 @@ public class SkillTooltip : MonoBehaviour
     [SerializeField] public GameData gameData;
     void Update()
     {
-        transform.position = Input.mousePosition + new Vector3(5,5,0);
+        transform.position = Input.mousePosition + new Vector3(-100,5,0);
     }
 
     public void displayTooltip(Toggle callerSkillpoint)

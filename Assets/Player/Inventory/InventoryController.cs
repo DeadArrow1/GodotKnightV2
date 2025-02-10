@@ -21,6 +21,8 @@ public class InventoryController : MonoBehaviour
 
     private void Awake()
     {
+        
+
         InventoryGrid = GameObject.FindGameObjectWithTag("Inventory");
 
 
@@ -31,7 +33,7 @@ public class InventoryController : MonoBehaviour
         LegginsSlot = GameObject.Find("Leggins");
         BootsSlot = GameObject.Find("Boots");
 
-
+        
 
 
 
@@ -100,15 +102,12 @@ public class InventoryController : MonoBehaviour
 
     }
 
-
-    void Start()
+    private void OnEnable()
     {
-        
+        Time.timeScale = 0;
     }
-
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        Time.timeScale = 1;
     }
 }

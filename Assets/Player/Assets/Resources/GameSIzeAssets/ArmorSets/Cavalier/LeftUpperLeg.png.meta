@@ -5,9 +5,6 @@ TextureImporter:
   - first:
       213: -3577112849219146395
     second: LeftUpperLeg_0
-  - first:
-      213: 9137277443697872643
-    second: LeftUpperLeg_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -120,9 +117,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 2
-        y: 0
-        width: 50
-        height: 88
+        y: 1
+        width: 47
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,28 +130,6 @@ TextureImporter:
       bones: []
       spriteID: 56daec4e0da8b5ec0800000000000000
       internalID: -3577112849219146395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: LeftUpperLeg_1
-      rect:
-        serializedVersion: 2
-        x: 40
-        y: 80
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30f0dc57c612ece70800000000000000
-      internalID: 9137277443697872643
       vertices: []
       indices: 
       edges: []

@@ -7,6 +7,8 @@ public class UsePrompt : MonoBehaviour
 
     [SerializeField] public GameObject InventoryWindow;
 
+    [SerializeField] public GameObject ESCMenu;
+
     void Update()
     {
         if (gameData.showUsePrompt == true)
@@ -26,6 +28,17 @@ public class UsePrompt : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Tab))
         {
             InventoryWindow.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && ESCMenu.activeInHierarchy)
+        {
+            Time.timeScale = 1;
+            ESCMenu.SetActive(false);
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = 0;
+            ESCMenu.SetActive(true);            
         }
 
 

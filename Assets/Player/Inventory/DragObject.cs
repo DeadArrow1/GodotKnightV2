@@ -45,10 +45,16 @@ public class DragObject : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     public void OnBeginDrag(PointerEventData eventData)
 
     {
+        
         if (InventoryGrid != null)
         {
             LayoutRebuilder.MarkLayoutForRebuild(InventoryGrid);
         }
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+        AudioClip clipToPlay = (AudioClip)Resources.Load("HoldItem", typeof(AudioClip));
+        audioSource.clip = clipToPlay;
+        audioSource.Play();
 
         canvasGroup.alpha = 0.6f; // Make the item semi-transparent while dragging
 

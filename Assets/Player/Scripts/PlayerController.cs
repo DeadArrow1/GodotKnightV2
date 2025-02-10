@@ -320,6 +320,53 @@ public class PlayerController : Singleton<PlayerController>
             myAnimator.SetTrigger("Drink");
         }
 
+        
+        
+        
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            gameData.cheatcodeProgress = "";
+            gameData.cheatcodeProgress = gameData.cheatcodeProgress + "k";
+        }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            gameData.cheatcodeProgress = gameData.cheatcodeProgress + "n";
+        }
+
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            gameData.cheatcodeProgress = gameData.cheatcodeProgress + "i";
+        }
+
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            gameData.cheatcodeProgress = gameData.cheatcodeProgress + "g";
+        }
+
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            gameData.cheatcodeProgress = gameData.cheatcodeProgress + "h";
+        }
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            gameData.cheatcodeProgress = gameData.cheatcodeProgress + "t";
+        }
+
+        if (gameData.cheatcodeProgress.Equals("knight"))
+        {
+            gameData.SkillpointCount = gameData.SkillpointCount + 20;
+            gameData.cheatcodeProgress = "";
+        }
+
+       
+
+
+
+
+
+
     }
     public void SetIsDrinkingFalse()
     {
@@ -352,13 +399,16 @@ public class PlayerController : Singleton<PlayerController>
 
     private void Attack()
     {
-        if (myAnimator.GetBool("IsAttacking"))
+        if (Time.timeScale != 0)
         {
-            myAnimator.SetBool("AttackContinues", true);
-        }
-        else
-        {
-            myAnimator.SetTrigger("Attack");
+            if (myAnimator.GetBool("IsAttacking"))
+            {
+                myAnimator.SetBool("AttackContinues", true);
+            }
+            else
+            {
+                myAnimator.SetTrigger("Attack");
+            }
         }
     }
 
@@ -404,6 +454,7 @@ public class PlayerController : Singleton<PlayerController>
         {
             movement = new Vector2(0, 0);
         }
+
        playerControls.Combat.Attack.started += _ => Attack();
     }
 
