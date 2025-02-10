@@ -26,7 +26,7 @@ public class HealingPotionDrop : MonoBehaviour
         if (other.tag == "Player" && pickedUp==false)
         {
             pickedUp = true;
-            gameData.HealingPotionsCount = gameData.HealingPotionsCount + 1;
+            gameData.HealingPotionsCount = gameData.HealingPotionsCount + 1 + 1 * gameData.SkillTreeListSkillObtainedStatus[45];
             myAnimator.SetTrigger("PickedUp");
         }
     }

@@ -7,6 +7,8 @@ public class Encounter : MonoBehaviour
 
     [SerializeField] public Transform EncounterDialog;
 
+    [SerializeField] public GameObject levelBlockFence;
+
     private bool playerInside;
     private bool rewardGiven=false;
 
@@ -45,6 +47,7 @@ public class Encounter : MonoBehaviour
         if(gameData.countEnemiesInEncounter == 0 && gameData.encounterStarted == true)
         {
             gameData.encounterEnded = true;
+            Destroy(levelBlockFence);
         }
 
         if (!rewardGiven)

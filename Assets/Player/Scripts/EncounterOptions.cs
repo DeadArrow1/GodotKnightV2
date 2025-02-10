@@ -29,9 +29,21 @@ public class EncounterOptions : MonoBehaviour
         if (gameData.RolledRewards.Count == 0)
         {
             gameData.RolledRewards.Clear();
-            gameData.RolledRewards.Add(0);
-            gameData.RolledRewards.Add(1);
-            gameData.RolledRewards.Add(2);
+
+            for (int i = 0; i < 3; i++)
+            {
+                int index = 0;
+                
+
+                index = Random.Range(0, gameData.EncounterRewardsOptions.Count);
+
+                while (gameData.RolledRewards.Contains(index))
+                {
+                    index = Random.Range(0, gameData.EncounterRewardsOptions.Count);
+                }
+                    gameData.RolledRewards.Add(index);
+
+            }    
         }
 
         Button0Name.text = gameData.EncounterRewardsOptions[gameData.RolledRewards[0]].rewardName;

@@ -47,6 +47,17 @@ public class PlayerController : Singleton<PlayerController>
 
     private bool IsDrinking;
 
+    [SerializeField]
+    GameObject RightLowerLegIdle;
+    [SerializeField]
+    GameObject LeftLowerLeg;
+    [SerializeField]
+    GameObject LeftLowerFoot;
+    [SerializeField]
+    GameObject RightLowerLegActive;
+    [SerializeField]
+    GameObject RightLowerFoot_0;
+
 
 
     protected override void Awake() 
@@ -71,6 +82,231 @@ public class PlayerController : Singleton<PlayerController>
     {
         PlayerInput();
         DetectLevelUp();
+
+        if (gameData.PlayerUpdateVisual)
+        {
+           
+
+            //boots
+            #region single texture parts
+
+            GameObject Head = GameObject.Find("Head");
+            if (Equipment.Helmet != null)
+            {
+                
+                Sprite ItemImage = Resources.Load(Equipment.Helmet.imagePath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = Head.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+            
+            }
+            else 
+            {
+                Sprite ItemImage = Resources.Load("GameSIzeAssets/Head", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = Head.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+            
+            }
+
+
+            GameObject Torso = GameObject.Find("Torso_0");
+            if (Equipment.Chest != null)
+            {
+
+                Sprite ItemImage = Resources.Load(Equipment.Chest.imagePath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = Torso.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+              
+            }
+            else
+            {
+                Sprite ItemImage = Resources.Load("GameSIzeAssets/Torso", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = Torso.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+                
+            }
+            #endregion
+
+
+
+            #region shoulders
+            GameObject RightUpperArm = GameObject.Find("RightUpperArm");
+            GameObject LeftUpperArm = GameObject.Find("LeftUpperArm");
+            if (Equipment.Shoulders != null)
+            {
+                
+                //  GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm
+                string leftUpperArmPath = Equipment.Shoulders.imagePath.Replace("RightUpperArm", "LeftUpperArm");
+
+                //right shoulder
+                Sprite ItemImage = Resources.Load(Equipment.Shoulders.imagePath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightUpperArm.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                //left shoulder
+                Sprite ItemImageleft = Resources.Load(leftUpperArmPath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftUpperArm.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+            }
+            else
+            {
+                Sprite ItemImage = Resources.Load("GameSIzeAssets/RightUpperArm", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightUpperArm.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                //left shoulder
+                Sprite ItemImageleft = Resources.Load("GameSIzeAssets/LeftUpperArm", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftUpperArm.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+
+
+            }
+            #endregion
+
+            #region Gauntlets
+            //gauntlets
+            GameObject RightLowerArm = GameObject.Find("RightLowerArm");
+            GameObject LeftLowerArm = GameObject.Find("LeftLowerArm");
+            if (Equipment.Gauntlets != null)
+            {
+
+                //  GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm
+                string leftlowerArmPath = Equipment.Gauntlets.imagePath.Replace("RightLowerArm", "LeftLowerArm");
+
+                //right shoulder
+                Sprite ItemImage = Resources.Load(Equipment.Gauntlets.imagePath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightLowerArm.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                //left shoulder
+                Sprite ItemImageleft = Resources.Load(leftlowerArmPath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftLowerArm.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+            }
+            else
+            {
+                Sprite ItemImage = Resources.Load("GameSIzeAssets/RightLowerArm", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightLowerArm.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                //left shoulder
+                Sprite ItemImageleft = Resources.Load("GameSIzeAssets/LeftLowerArm", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftLowerArm.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+
+
+            }
+            #endregion
+
+
+            #region Leggins
+            //Leggins
+            GameObject RightUpperLeg = GameObject.Find("RightUpperLeg_0");
+            GameObject LeftUpperLeg = GameObject.Find("LeftUpperLeg_0");
+            if (Equipment.Leggins != null)
+            {
+
+                //  GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm
+                string leftupperArmPath = Equipment.Leggins.imagePath.Replace("RightUpperLeg", "LeftUpperLeg");
+
+                //right shoulder
+                Sprite ItemImage = Resources.Load(Equipment.Leggins.imagePath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightUpperLeg.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                //left shoulder
+                Sprite ItemImageleft = Resources.Load(leftupperArmPath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftUpperLeg.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+            }
+            else
+            {
+                Sprite ItemImage = Resources.Load("GameSIzeAssets/RightUpperLeg", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightUpperLeg.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                //left shoulder
+                Sprite ItemImageleft = Resources.Load("GameSIzeAssets/LeftUpperLeg", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftUpperLeg.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+
+
+            }
+            #endregion
+
+
+            #region Boots
+     
+            
+            
+            
+            if (Equipment.Boots != null)
+            {
+                //prepare all files from the given sprite
+                //GameSIzeAssets/ArmorSets/Cavalier/RightLowerLeg
+                string LeftLowerLegPath = Equipment.Boots.imagePath.Replace("RightLowerLeg", "LeftLowerLeg");
+                string LeftLowerFootPath = Equipment.Boots.imagePath.Replace("RightLowerLeg", "LeftLowerFoot");
+
+                string RightLowerLegActivePath = LeftLowerLegPath;
+
+                string RightLowerFoot_0Path = LeftLowerFootPath;
+
+                //right leg
+                Sprite ItemImage = Resources.Load(Equipment.Boots.imagePath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightLowerLegIdle.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                Sprite ItemImageLegActive = Resources.Load(RightLowerLegActivePath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageLegActive = RightLowerLegActive.GetComponent<SpriteRenderer>();
+                CurrentImageLegActive.sprite = ItemImageLegActive;
+
+
+                Sprite ItemImageFootActive = Resources.Load(RightLowerFoot_0Path, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageFootActive = RightLowerFoot_0.GetComponent<SpriteRenderer>();
+                CurrentImageFootActive.sprite = ItemImageFootActive;
+
+                //left leg
+                Sprite ItemImageleft = Resources.Load(LeftLowerLegPath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftLowerLeg.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+
+                Sprite ItemImageleftFoot = Resources.Load(LeftLowerFootPath, typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleftFoot= LeftLowerFoot.GetComponent<SpriteRenderer>();
+                CurrentImageleftFoot.sprite = ItemImageleftFoot;
+            }
+            else
+            {
+                Sprite ItemImage = Resources.Load("GameSIzeAssets/RightLowerLeg", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImage = RightLowerLegIdle.GetComponent<SpriteRenderer>();
+                CurrentImage.sprite = ItemImage;
+
+                Sprite ItemImageLegActive = Resources.Load("GameSIzeAssets/LeftLowerLeg", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageLegActive = RightLowerLegActive.GetComponent<SpriteRenderer>();
+                CurrentImageLegActive.sprite = ItemImageLegActive;
+
+
+                Sprite ItemImageFootActive = Resources.Load("GameSIzeAssets/LeftLowerFoot", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageFootActive = RightLowerFoot_0.GetComponent<SpriteRenderer>();
+                CurrentImageFootActive.sprite = ItemImageFootActive;
+
+                //left leg
+                Sprite ItemImageleft = Resources.Load("GameSIzeAssets/LeftLowerLeg", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleft = LeftLowerLeg.GetComponent<SpriteRenderer>();
+                CurrentImageleft.sprite = ItemImageleft;
+
+                Sprite ItemImageleftFoot = Resources.Load("GameSIzeAssets/LeftLowerFoot", typeof(Sprite)) as Sprite;
+                SpriteRenderer CurrentImageleftFoot = LeftLowerFoot.GetComponent<SpriteRenderer>();
+                CurrentImageleftFoot.sprite = ItemImageleftFoot;
+
+
+            }
+            #endregion
+            gameData.PlayerUpdateVisual = false;
+
+           
+
+
+        }
+
 
         if (gameData.CurrentHealth <= 0 && !gameData.isDead)
         {
@@ -204,13 +440,24 @@ public class PlayerController : Singleton<PlayerController>
     public void DrankHealingPotion()
     {
         gameData.HealingPotionsCount = gameData.HealingPotionsCount -1;
+        int baseHealingAmount = 50;
 
-        if(gameData.CurrentHealth+50 > gameData.MaxHealth)
+        //SKILL MODIFICATION
+        double additionalHealing = baseHealingAmount * (0.25 * gameData.SkillTreeListSkillObtainedStatus[15] + 0.25 * gameData.SkillTreeListSkillObtainedStatus[22] + 0.25 * gameData.SkillTreeListSkillObtainedStatus[30] + 0.25 * gameData.SkillTreeListSkillObtainedStatus[38]);
+        additionalHealing = additionalHealing + gameData.SkillTreeListSkillObtainedStatus[38] * 0.1 * gameData.MaxHealth;
+
+
+        int healingAmount = (int)Mathf.Round((float)(baseHealingAmount + additionalHealing));
+
+        //SKILL MODIFICATION END
+
+
+        if (gameData.CurrentHealth+ healingAmount > gameData.MaxHealth)
         {
             gameData.CurrentHealth = gameData.MaxHealth;
         }
         else { 
-            gameData.CurrentHealth = gameData.CurrentHealth + 50; 
+            gameData.CurrentHealth = gameData.CurrentHealth + healingAmount; 
         }
             
     }

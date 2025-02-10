@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,7 +13,7 @@ public class GameData : ScriptableObject
     public int StartingNeededXP = 100;
 
     //VALUES FOR INITIALIZING PLAYER AND REFERENCE FOR BASE FOR CALCULATING BONUSES
-
+    public bool PlayerUpdateVisual = false;
 
     //GAMEPLAY VALUES
     #region PlayerHealth
@@ -452,9 +453,29 @@ public class GameData : ScriptableObject
         HealthBonusFromEncounters=0;
         ArmorBonusFromEncounters=0;
 
-    CreateSkillPoints();
+        CreateSkillPoints();
         ResetSkillTree();
         GeneratePrerequisities();
+
+
+        Inventory.Clear();
+        itemID = 0;
+        //single image
+        Inventory.Add(new Item(0,"Cavalier Helmet", ItemSlot.Helmet, "GameSIzeAssets/ArmorSets/Cavalier/Head", "GameSIzeAssets/ArmorSets/Cavalier/Head"));
+        Inventory.Add(new Item(1,"Cavalier Chest", ItemSlot.Chest, "GameSIzeAssets/ArmorSets/Cavalier/Chest", "GameSIzeAssets/ArmorSets/Cavalier/Chest"));
+        //single
+
+        //pair
+        Inventory.Add(new Item(2,"Cavalier Shoulders", ItemSlot.Shoulders, "GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm", "GameSIzeAssets/ArmorSets/Cavalier/RightUpperArm"));
+        Inventory.Add(new Item(3,"Cavalier Gauntlets", ItemSlot.Gauntlets, "GameSIzeAssets/ArmorSets/Cavalier/RightLowerArm", "GameSIzeAssets/ArmorSets/Cavalier/RightLowerArm"));
+
+        Inventory.Add(new Item(4,"Cavalier Leggins", ItemSlot.Leggins, "GameSIzeAssets/ArmorSets/Cavalier/RightUpperLeg", "GameSIzeAssets/ArmorSets/Cavalier/RightUpperLeg"));
+
+
+        Inventory.Add(new Item(5,"Cavalier Boots", ItemSlot.Boots, "GameSIzeAssets/ArmorSets/Cavalier/RightLowerLeg", "GameSIzeAssets/ArmorSets/Cavalier/RightLowerLeg"));
+
+        //TEST DELETE LATER
+        //Inventory.Add(new Item(6, "Cavalier Helmet2", ItemSlot.Helmet, "GameSIzeAssets/ArmorSets/Cavalier/Chest", "GameSIzeAssets/ArmorSets/Cavalier/Chest"));
     }
 
     public void DetectLevelUp()
@@ -529,7 +550,8 @@ public class GameData : ScriptableObject
         encounterStarted=false;
         encounterEnded = false;
         countEnemiesInEncounter = 0;
-    }
+        RolledRewards.Clear();
+}
     [SerializeField]
     public List<EncounterRewards> EncounterRewardsOptions;
 
@@ -539,8 +561,55 @@ public class GameData : ScriptableObject
     public void prepareEncounters()
     {
         EncounterRewardsOptions.Clear();
-        EncounterRewardsOptions.Add(new EncounterRewards ("BONUS HP", "reward0",10,0,0)); //Add hp
-        EncounterRewardsOptions.Add(new EncounterRewards("BONUS DMG", "reward1",0,10,0)); //Add damage
-        EncounterRewardsOptions.Add(new EncounterRewards("BONUS ARMOR", "reward2",0,0,10)); //Add armor
-    } 
+        EncounterRewardsOptions.Add(new EncounterRewards ("Tenacity", "+10 Health", 10,0,0)); //Add hp
+        EncounterRewardsOptions.Add(new EncounterRewards("Power", "+10 Damage", 0,10,0)); //Add damage
+        EncounterRewardsOptions.Add(new EncounterRewards("Protection", "+10 Armor", 0,0,10)); //Add armor
+
+        EncounterRewardsOptions.Add(new EncounterRewards("BONUS HP", "reward0", 10, 0, 0)); //Add hp
+        EncounterRewardsOptions.Add(new EncounterRewards("BONUS DMG", "reward1", 0, 10, 0)); //Add damage
+        EncounterRewardsOptions.Add(new EncounterRewards("BONUS ARMOR", "reward2", 0, 0, 10)); //Add armor
+
+    }
+
+
+    #region Inventory
+
+    public enum ItemSlot
+    {
+        Helmet,
+        Shoulders,
+        Gauntlets,
+        Chest,
+        Leggins,
+        Boots,
+        Undefined
+    }
+
+    int itemID=0;
+
+    [System.Serializable]
+    public class Item
+    {
+        public int uniqueID;
+        public  string name;
+        public  ItemSlot slot;
+        public  string imagePath;
+        public string imagePathInventory;
+
+        public Item(int UniqueID,string Name, ItemSlot Slot, string ImagePath, string ImagePathInventory)
+        {
+            uniqueID = UniqueID;
+            name = Name;
+            slot = Slot;
+            imagePath = ImagePath;
+            imagePathInventory = ImagePathInventory;
+        }      
+    }
+    #endregion
+    [SerializeField]
+    public List<Item> Inventory;
+
+   
+    /*[SerializeField]
+    public List<Equipment> EquipmentItems;*/
 }

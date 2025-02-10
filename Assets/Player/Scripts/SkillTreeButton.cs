@@ -21,5 +21,10 @@ public class SkillTreeButton : MonoBehaviour
 
             skillTreeButton.gameObject.SetActive(false);
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            skillTreeButton.onClick.Invoke();
+        }
     }
 }

@@ -355,6 +355,11 @@ MonoBehaviour:
   Attack2: {fileID: 8300000, guid: 26b1d47905612b04388c32f5f3b84740, type: 3}
   Attack3: {fileID: 8300000, guid: 26b1d47905612b04388c32f5f3b84740, type: 3}
   Run: {fileID: 8300000, guid: 0875802d31ee5cc4da71b741d9755268, type: 3}
+  RightLowerLegIdle: {fileID: 1197352572295365785}
+  LeftLowerLeg: {fileID: 6700195215962877674}
+  LeftLowerFoot: {fileID: 467920689387369028}
+  RightLowerLegActive: {fileID: 2178651965907972878}
+  RightLowerFoot_0: {fileID: 4065708314909998319}
 --- !u!95 &4444021619310171361
 Animator:
   serializedVersion: 7
@@ -539,7 +544,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1310845948802146470}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.022, y: 0.527, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

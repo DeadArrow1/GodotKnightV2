@@ -84,7 +84,9 @@ public class SkeletonHealth : MonoBehaviour
             }
 
             float DropChance = Random.value;
-            if (DropChance > 0.9)
+            double DropTreshold = 0.9 - 0.05 * gameData.SkillTreeListSkillObtainedStatus[21]- 0.05 * gameData.SkillTreeListSkillObtainedStatus[29] - 0.05 * gameData.SkillTreeListSkillObtainedStatus[37] - 0.05 * gameData.SkillTreeListSkillObtainedStatus[45];
+
+            if (DropChance > DropTreshold)
             {
                 GameObject spawnInstance = Instantiate(HealthPotionPrefab);
                 spawnInstance.transform.position = LootDropLocation.transform.position;

@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 4241935689555877788}
   - component: {fileID: 7906107873038054149}
   - component: {fileID: 3173813248060587965}
+  - component: {fileID: 1482908111296981814}
   m_Layer: 0
   m_Name: SkeletonBody
   m_TagString: Untagged
@@ -164,6 +165,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DeathSoundSource: {fileID: 5047454527040337524}
+--- !u!210 &1482908111296981814
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2651590942835976913}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_SortAtRoot: 0
 --- !u!1 &3288988627354111594
 GameObject:
   m_ObjectHideFlags: 0
